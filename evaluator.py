@@ -2,7 +2,7 @@ import unittest
 import hydra
 from hydra import initialize, compose
 from omegaconf import DictConfig, OmegaConf
-from torch import multiprocessing
+import multiprocessing
 import os
 
 import numpy as np
@@ -18,10 +18,6 @@ import pandas as pd
 import random
 
 import numpy as np
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
 from tqdm import tqdm
 from functools import partial
 from copy import deepcopy
@@ -47,8 +43,6 @@ from functools import partial
 from openai.embeddings_utils import cosine_similarity
 
 from pathlib import Path
-from prompt_toolkit import PromptSession, HTML
-from prompt_toolkit.history import FileHistory
 from rich.console import Console
 from rich.markdown import Markdown
 

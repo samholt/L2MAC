@@ -5,7 +5,6 @@ import numpy as np
 from scipy import stats
 import shelve
 import glob
-import torch
 import random
 from collections import defaultdict
 import os, sys
@@ -52,21 +51,6 @@ STEP_AHEAD_NAME_MAP = {'encoder_test_rmse_orig': 1,
                         'decoder_test_rmse_5-step': 5,
                         'decoder_test_rmse_6-step': 6}
 
-def load_metrics_from_tensorboard_file(log_path, metrics=["charts/episodic_return"]):
-    """
-    log_path: path to the tensorboard log file
-    metrics: list of metrics to load: Possible metrics: ["charts/episodic_return", "charts/episodic_length", "charts/epsilon", "losses/td_loss", "losses/q_values", "charts/SPS"]
-    """
-    from tensorflow.python.summary.summary_iterator import summary_iterator
-    data = {}
-    for metric in metrics:
-        data[metric] = []
-    # for summary in tqdm(summary_iterator(log_path)):
-    for summary in summary_iterator(log_path):
-        if summary.HasField('summary'):
-            if summary.summary.value[0].tag in metrics:
-                data[summary.summary.value[0].tag].append((summary.step, summary.summary.value[0].simple_value))
-    return data
     
 def file_path_from_parent_directory(parent_dir):
     files = glob.glob(parent_dir + '/*')

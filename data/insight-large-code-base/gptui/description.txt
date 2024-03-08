@@ -1,1 +1,0 @@
-Take the existing code base and implement the following feature: Add a new button on the frontend that when clicked deletes all the chat histories and all the chat messages.

@@ -4,7 +4,6 @@ import numpy as np
 import openai
 from llm_utils import chat_completion_rl
 import re
-from torch.multiprocessing import Queue
 import json
 from copy import deepcopy
 from llm_utils import get_llm_config

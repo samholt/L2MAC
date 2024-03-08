@@ -1,1 +1,0 @@
-Create a public endpoint listing all the public events happening in the next week.

@@ -1,4 +1,4 @@
-from torch import multiprocessing
+import multiprocessing
 import logging
 from omegaconf import DictConfig
 

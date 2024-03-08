@@ -1,1 +1,0 @@
-Take the existing code base and implement the following feature: On the user setting page show the statistic of when the user created their account.

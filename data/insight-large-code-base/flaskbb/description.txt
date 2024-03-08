@@ -1,1 +1,0 @@
-Take the existing code base and implement the following feature: On the board statistics on the front page show the total number of newly registered users within the last 30 days.

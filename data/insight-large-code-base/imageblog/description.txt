@@ -1,1 +1,0 @@
-Take the existing code base and implement the following feature: Add a new 'interests' field to the user profile. Make it so that this field is shown when viewing their profile, and the user can also edit and update this new field as well.

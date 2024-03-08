@@ -1,24 +1,14 @@
 import hydra
 from omegaconf import DictConfig, OmegaConf
-# from torch import multiprocessing
-import os
+import multiprocessing
 
 import numpy as np
-import random
-from collections import defaultdict
 import time
-
-import os
-import random
 import time
 import traceback
 import pandas as pd
 
 import numpy as np
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
 from tqdm import tqdm
 from functools import partial
 from copy import deepcopy
@@ -26,7 +16,7 @@ from enum import Enum
 
 from utils.logging_utils import create_logger_in_process, generate_log_file_path
 from utils.exp_utils import seed_all, config_to_dict, dict_to_config
-from utils.results_utils import normalize_means, generate_main_results_table
+from utils.results_utils import generate_main_results_table
 
 from llm_utils import setup_chat_rate_limiter
 
@@ -44,8 +34,6 @@ def run(config: DictConfig) -> None:
     request_limit, token_limit = setup_chat_rate_limiter(config)
     rate_limiter = ChatRateLimiter(request_limit=request_limit, token_limit=token_limit) # ChatRateLimiter(request_limit=request_limit, token_limit=token_limit)
     config.run.log_path = log_path
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu") if config.setup.cuda else "cpu"
-    config.run.device = str(device)
     if config.setup.debug_mode:
         config.setup.multi_process_results = False    
     if config.setup.multi_process_results:

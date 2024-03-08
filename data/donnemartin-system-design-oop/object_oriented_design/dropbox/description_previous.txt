@@ -1,8 +1,0 @@
-Write complete MVC code for the following system design task. Design Dropbox or Google Drive (A Global File Storage and Sharing Service)
-Design a file hosting service that allows users to upload, store, share, delete, and download files on their servers and provides synchronization across various devices.
-Features to implement: 
-1. Ability to upload / view / search / share / download files.
-2. ACID (Atomicity, Consistency, Isolation, and Durability) properties should be present in the system.
-3. Approach to track permission for file sharing.
-4. Allowing multiple users to edit the same document.
-5. The system should support storing large files up to a GB.

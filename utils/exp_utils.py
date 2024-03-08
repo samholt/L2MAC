@@ -1,6 +1,5 @@
 import time
 import random
-import torch
 import numpy as np
 from omegaconf import DictConfig, OmegaConf
 from scipy.integrate import solve_ivp
@@ -20,7 +19,6 @@ def seed_all(seed=None):
         seed = round(time() * 1000) % int(1e9)
 
     # Set the seeds using the shifted seed
-    torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
 

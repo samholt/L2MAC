@@ -1,1 +1,0 @@
-Take the existing code base and implement the following feature: Create a button on the frontend a user can click to delete all the dashboards.
