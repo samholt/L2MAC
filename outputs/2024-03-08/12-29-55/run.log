@@ -1,0 +1,1 @@
+[2024-03-08 12:29:55,833][openai][INFO] - error_code=401 error_message='Access denied due to invalid subscription key or wrong API endpoint. Make sure to provide a valid key for an active subscription and use a correct regional API endpoint for your resource.' error_param=None error_type=None message='OpenAI API error received' stream_error=False

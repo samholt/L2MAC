@@ -2,18 +2,12 @@ run:
   max_episodes: 1
   log_path: ''
   device: ''
-  # model: 'gpt-3.5-turbo'
-  model: 'gpt-4'
-  # model: 'gpt-4-32k'
-  # model: 'gpt-3.5-turbo-16k'
-  # model: 'gpt-35-turbo-16k-0'
-  # model: 'gpt-4-3'
-  # model: 'gpt-4-32k-0'
+  model: gpt-4
   temperature: 0.01
   top_p: 1
   frequency_penalty: 0
   presence_penalty: 0
-  stop: ""
+  stop: ''
 relentless:
   lam: 10
 setup:
@@ -22,10 +16,18 @@ setup:
   flush_mode: false
   multi_process_results: false
   multi_process_cores: 4
-  experiment: 'MAIN_TABLE'
-  methods_to_evaluate: ['LLMatic', 'ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion', 'ZeroShot']
-  envs_to_evaluate: ['donnemartin-system-design-oop-url_shortener', 'donnemartin-system-design-oop-twitter','donnemartin-system-design-oop-whatsapp'] # Core paper environments
-  # envs_to_evaluate: ['donnemartin-system-design-oop-recipe', 'donnemartin-system-design-oop-eventplanner', 'donnemartin-system-design-oop-finance'] # Appendix paper environments
+  experiment: MAIN_TABLE
+  methods_to_evaluate:
+  - LLMatic
+  - ZeroShot
+  - CodeT
+  - SelfRefine
+  - Reflexion
+  - ZeroShot
+  envs_to_evaluate:
+  - donnemartin-system-design-oop-url_shortener
+  - donnemartin-system-design-oop-twitter
+  - donnemartin-system-design-oop-whatsapp
   wandb:
     project: LLMatic
     track: false
@@ -42,4 +44,4 @@ setup:
   api_retry_with_exponential_backoff__jitter: true
   api_retry_with_exponential_backoff__max_retries: 10
   api_request_timeout: 60000
-  api_stream: False
+  api_stream: false

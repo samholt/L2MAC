@@ -9,6 +9,12 @@ import tiktoken
 import asyncio
 # from openai.embeddings_utils import get_embedding, cosine_similarity
 
+# Links new one from Evgeny
+# ?? Latest https://oai.azure.com/portal/dad05f6a32864362855d1f8567c87ac9/deployment?tenantid=49a50445-bdfa-4b79-ade3-547b4f3986e9
+# UK South https://oai.azure.com/portal/c515964db126454388c7973fbecd4987/deployment
+# Swiss North https://oai.azure.com/portal/72161229bd46492a8851fc869b220140/deployment
+
+
 # Tokenizer
 CL100K_ENCODER = tiktoken.get_encoding("cl100k_base")
 P50K_ENCODER = tiktoken.get_encoding("p50k_base")
@@ -20,7 +26,8 @@ AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
 
 AZURE_SWISS_ENDPOINT = "https://vdslabten-oai-swnorth.openai.azure.com/"
 AZURE_NEW_UK_SOUTH_ENDPOINT = ""
-KEY_SWISS = os.getenv("AZURE_OPENAI_KEY_SWISS")
+# KEY_SWISS = os.getenv("AZURE_OPENAI_KEY_SWISS")
+KEY_SWISS = os.getenv("AZURE_OPENAI_KEY_SWISS_LATEST")
 KEY_NEW_UK_SOUTH = os.getenv("AZURE_OPENAI_KEY_NEWUKSOUTH")
 
 
@@ -101,7 +108,7 @@ AZURE_MODEL_DETAILS_MAP = {"gpt-3.5-turbo": {'engine': "gpt35turbo0613_20230925"
                                                  'max_batch_size': 16, # 2048 Should be, microsoft says 16 at this time
                                              },},
                             "gpt-4":        {'engine': "gpt4_20230815",
-                                             'api_key': os.getenv("AZURE_OPENAI_KEY_SOUTH"),
+                                             'api_key': AZURE_OPENAI_KEY_SOUTH,
                                              'api_version': "2023-07-01-preview",
                                              'api_base': AZURE_SOUTH_ENDPOINT,
                                              'api_type': "azure",
@@ -115,7 +122,7 @@ AZURE_MODEL_DETAILS_MAP = {"gpt-3.5-turbo": {'engine': "gpt35turbo0613_20230925"
                                                  'rate_limit_(Tokens per minute)': 10000,
                                                  'rate_limit_(Requests per minute)': 60,
                                                  'max_tokens': 8192
-                                             }}, # OLD GPT-4
+                                             }},
                             "gpt-4-0":        {'engine': "SWNorth-gpt-4-0613-20231016-4",
                                              'api_key': KEY_SWISS,
                                              'api_version': "2023-07-01-preview",
@@ -163,6 +170,57 @@ AZURE_MODEL_DETAILS_MAP = {"gpt-3.5-turbo": {'engine': "gpt35turbo0613_20230925"
                                                  'rate_limit_(Tokens per minute)': 10000,
                                                  'rate_limit_(Requests per minute)': 60,
                                                  'max_tokens': 8192
+                                             }},
+                            "gpt-4-latest-A":   {'engine': "gpt4_20231230_1106preview",
+                                             'api_key': AZURE_OPENAI_KEY_SOUTH,
+                                             'api_version': "2023-07-01-preview",
+                                             'api_base': AZURE_SOUTH_ENDPOINT,
+                                             'api_type': "azure",
+                                             'properties': {
+                                                 'model_name': 'gpt-4',
+                                                 'model_version': '1106-Preview',
+                                                 'version_update_policy': 'Once a new default version is available.',
+                                                 'deployment_type': 'Standard',
+                                                 'content_filter': 'Default',
+                                                 'tokens_per_minute_rate_limit_(thousands)': 20,
+                                                 'rate_limit_(Tokens per minute)': 20000,
+                                                 'rate_limit_(Requests per minute)': 120,
+                                                #  'max_tokens': 8192
+                                                 'max_tokens': 128000
+                                             }},
+                            "gpt-4-latest-B":   {'engine': "gpt4_20240119_1106preview_B",
+                                             'api_key': AZURE_OPENAI_KEY_SOUTH,
+                                             'api_version': "2023-07-01-preview",
+                                             'api_base': AZURE_SOUTH_ENDPOINT,
+                                             'api_type': "azure",
+                                             'properties': {
+                                                 'model_name': 'gpt-4',
+                                                 'model_version': '1106-Preview',
+                                                 'version_update_policy': 'Once a new default version is available.',
+                                                 'deployment_type': 'Standard',
+                                                 'content_filter': 'Default',
+                                                 'tokens_per_minute_rate_limit_(thousands)': 20,
+                                                 'rate_limit_(Tokens per minute)': 20000,
+                                                 'rate_limit_(Requests per minute)': 120,
+                                                #  'max_tokens': 8192
+                                                 'max_tokens': 128000
+                                             }},
+                            "gpt-4-latest-C":   {'engine': "gpt4_20240119_1106preview_C",
+                                             'api_key': AZURE_OPENAI_KEY_SOUTH,
+                                             'api_version': "2023-07-01-preview",
+                                             'api_base': AZURE_SOUTH_ENDPOINT,
+                                             'api_type': "azure",
+                                             'properties': {
+                                                 'model_name': 'gpt-4',
+                                                 'model_version': '1106-Preview',
+                                                 'version_update_policy': 'Once a new default version is available.',
+                                                 'deployment_type': 'Standard',
+                                                 'content_filter': 'Default',
+                                                 'tokens_per_minute_rate_limit_(thousands)': 20,
+                                                 'rate_limit_(Tokens per minute)': 20000,
+                                                 'rate_limit_(Requests per minute)': 120,
+                                                #  'max_tokens': 8192
+                                                 'max_tokens': 128000
                                              }},
                             "gpt-4-3":        {'engine': "SWNorth-gpt-4-0613-20231016",
                                              'api_key': KEY_SWISS,

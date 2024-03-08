@@ -31,3 +31,4 @@ scikit-learn
 pygount
 radon
 matplotlib
+pytest
