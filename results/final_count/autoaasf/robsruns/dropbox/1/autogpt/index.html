@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CloudSafe</title>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+form {
+  margin: 20px 0;
+}
+input[type='text'], input[type='password'], input[type='file'] {
+  width: 100%;
+  margin: 5px 0;
+}
+input[type='submit'] {
+  margin-top: 10px;
+}
+body.light {
+  background-color: #fff;
+  color: #000;
+}
+body.dark {
+  background-color: #000;
+  color: #fff;
+}
+#preview {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+</style>
+<script>
+function previewFile(input) {
+  var file = input.files[0];
+  var reader = new FileReader();
+  reader.onloadend = function() {
+    document.getElementById('preview').src = reader.result;
+  }
+  reader.readAsDataURL(file);
+}
+</script>
+</head>
+<body class='light'>
+<h1>Welcome to CloudSafe!</h1>
+<form>
+<label for='username'>Username:</label><br>
+<input type='text' id='username' name='username'><br>
+<label for='password'>Password:</label><br>
+<input type='password' id='password' name='password'><br>
+<input type='submit' value='Register/Login'>
+</form>
+<form>
+<label for='file'>Upload file:</label><br>
+<input type='file' id='file' name='file' onchange='previewFile(this)'><br>
+<img id='preview' src=''>
+<input type='submit' value='Upload'>
+</form>
+<form>
+<label for='file_id'>Download file:</label><br>
+<input type='text' id='file_id' name='file_id'><br>
+<input type='submit' value='Download'>
+</form>
+</body>
+</html>

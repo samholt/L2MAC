@@ -1,0 +1,1 @@
+Starting the implementation of 'User_Friendly_and_Intuitive_Platform' functionality.

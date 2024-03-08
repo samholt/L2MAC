@@ -1,0 +1,9 @@
+1. Create core classes: URLShortener, User, Admin
+2. Implement URLShortener class with methods: validate_url, generate_shortened_url, shorten_url, redirect_to_original_url
+3. Implement User class with methods: create_account, view_shortened_urls, edit_url, delete_url, view_analytics, set_expiration_date
+4. Implement Admin class with methods: view_all_urls, delete_url_or_user, monitor_performance
+5. Implement analytics functionality: track_clicks, track_geolocation
+6. Create main.py as the entrypoint file
+7. Implement user account functionality
+8. Implement admin dashboard
+9. Implement expiration functionality

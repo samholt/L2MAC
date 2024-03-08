@@ -1,0 +1,7 @@
+1. Outline the architecture
+2. Identify core classes and functions
+3. Plan the implementation
+4. Write tests
+5. Implement code
+6. Run tests
+7. Provide complete codebase

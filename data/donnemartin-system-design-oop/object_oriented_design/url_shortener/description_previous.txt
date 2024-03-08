@@ -1,0 +1,7 @@
+Write complete MVC code for the following system design task.  Design a URL Shortening Service (TinyURL)
+Features to implement:
+1. Given a long URL, the service should generate a shorter and unique alias for it.
+2. When the user hits a short link, the service should redirect to the original link.
+3. Support for custom short URLs.
+4. Track click stats.
+5. Delete expired URLs.

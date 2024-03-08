@@ -1,0 +1,3 @@
+function trackProgress(budget) {
+  // Progress tracking logic goes here
+}

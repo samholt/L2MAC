@@ -1,0 +1,9 @@
+flask
+flask_socketio
+flask_login
+flask_sqlalchemy
+flask_wtf
+flask_bcrypt
+email_validator
+pytest
+pytest_flask

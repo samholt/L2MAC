@@ -1,0 +1,6 @@
+Task 2: Implement a venue sourcing feature
+- Define the feature requirements
+- Design the user interface for the feature
+- Implement the backend logic for the feature
+- Test the feature
+- Integrate the feature into the application

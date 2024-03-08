@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upcoming Meetings</title>
+</head>
+<body>
+	<h1>Upcoming Meetings</h1>
+	{% for meeting in book_club.meetings %}
+		<p>Date: {{ meeting.date }}</p>
+		<p>Time: {{ meeting.time }}</p>
+		<p>Book: {{ meeting.book }}</p>
+	{% endfor %}
+</body>
+</html>

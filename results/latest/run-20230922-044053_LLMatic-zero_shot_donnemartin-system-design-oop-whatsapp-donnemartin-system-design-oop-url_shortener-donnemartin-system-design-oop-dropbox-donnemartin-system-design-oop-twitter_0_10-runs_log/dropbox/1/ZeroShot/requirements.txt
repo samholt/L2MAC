@@ -1,0 +1,11 @@
+flask
+flask-login
+flask-sqlalchemy
+flask-wtf
+flask-bcrypt
+flask-mail
+werkzeug
+itsdangerous
+sqlalchemy
+pytest
+pytest-flask

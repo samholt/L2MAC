@@ -1,0 +1,11 @@
+(decgpt) sam@lm-adastra:~/code/DecentralizedGPTsCode$  cd /home/sam/code/DecentralizedGPTsCode ; /usr/bin/env /home/sam/anaconda3/envs/decgpt/bin/python /home/sam/.vscode-server/extensions/ms-python.python-2023.16.0/pythonFiles/lib/python/debugpy/adapter/../../debugpy/launcher 43889 -- /home/sam/code/DecentralizedGPTsCode/evaluator.py 
+Method: autogpt: Functional Features: 0 | Test Percentage: NA | LOC: 120 | Errors: 6 | Average Cyclomatic Complexity: 1.1944444444444444
+==========
+Method: llmatic: Functional Features: 5 | Test Percentage: 100.0 | LOC: 227 | Errors: 0 | Average Cyclomatic Complexity: 2.4692307692307693
+==========
+Method: unleash: Functional Features: 0 | Test Percentage: NA | LOC: 37 | Errors: 3 | Average Cyclomatic Complexity: 1.1666666666666665
+==========
+Method: gpt4: Functional Features: 0 | Test Percentage: NA | LOC: 109 | Errors: 8 | Average Cyclomatic Complexity: 1.356060606060606
+==========
+
+Online Chat | Url Shortener | Online file storage

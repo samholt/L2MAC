@@ -1,0 +1,5 @@
+flask
+flask_jwt_extended
+werkzeug
+pytest
+

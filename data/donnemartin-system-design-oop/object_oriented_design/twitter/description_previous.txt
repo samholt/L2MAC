@@ -1,0 +1,8 @@
+Write complete MVC code for the following system design task. Design Twitter.
+Features to implement:
+1. Privacy controls around each tweet.
+2. Users should be able to post tweets also the system should support replies to tweets/grouping tweets by conversations.
+3. Users should be able to see trending tweets/posts.
+4. Direct messaging
+5. Mentions/Tagging.
+6. The user should be able to follow another user.

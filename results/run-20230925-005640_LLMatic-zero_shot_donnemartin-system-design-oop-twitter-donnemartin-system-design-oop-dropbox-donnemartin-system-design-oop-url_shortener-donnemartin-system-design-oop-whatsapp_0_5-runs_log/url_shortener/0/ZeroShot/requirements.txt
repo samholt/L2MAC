@@ -1,0 +1,8 @@
+flask
+pytest
+dataclasses
+requests
+geopy
+flask-login
+flask-admin
+

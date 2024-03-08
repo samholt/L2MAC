@@ -1,0 +1,5 @@
+Bank Account Integration System: 
+- Multiple Bank Accounts: Allow users to integrate multiple bank accounts.
+- Automatic Import of Transactions: Automatically import transactions from the integrated bank accounts.
+- Real-time Updates: Provide real-time updates of account balances and transactions.
+- Investment Performance Overview: Give users an overview of their investment performance.

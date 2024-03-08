@@ -1,0 +1,20 @@
+import pytest
+import app
+
+@pytest.fixture
+def client():
+	app.app.config['TESTING'] = True
+	with app.app.test_client() as client:
+		yield client
+
+
+def test_create_user(client):
+	response = client.post('/create_user', json={'username': 'test', 'password': 'test123'})
+	assert response.status_code == 201
+	assert response.get_json() == {'message': 'User created successfully'}
+
+
+def test_add_transaction(client):
+	response = client.post('/add_transaction', json={'user_id': 'test', 'type': 'income', 'amount': 1000.0, 'category': 'salary'})
+	assert response.status_code == 201
+	assert response.get_json() == {'message': 'Transaction added successfully'}

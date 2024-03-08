@@ -1,0 +1,7 @@
+Write complete MVC code for the following system design task. Design Facebook Messenger or WhatsApp (A Global Chat Service)
+Features to implement: 
+1. One-on-one text messaging between users.
+2. Support group chats.
+3. Delivered and read status
+4. Support sending .jpg images between users.
+5. End-to-end message encryption.

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class='content-section'>
+		<h2 class='account-heading'>Your URLs</h2>
+		{% for url in current_user.urls %}
+			<div class='media'>
+				<div class='media-body'>
+					<h5 class='mt-0'>{{ url.short_url }}</h5>
+					<p>{{ url.original_url }}</p>
+					<a href='{{ url_for('analytics', short_url=url.short_url) }}' class='btn btn-outline-info'>View Analytics</a>
+					<form method='POST' action='{{ url_for('delete_url', short_url=url.short_url) }}' class='d-inline'>
+						<input type='submit' value='Delete' class='btn btn-outline-danger'>
+					</form>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock content %}

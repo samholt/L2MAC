@@ -1,0 +1,13 @@
+/* CSS for Home page */
+
+.home-banner {
+	background: #50b3a2;
+	height: 300px;
+	color: white;
+	padding: 50px 0 50px 0;
+}
+
+.home-banner h1 {
+	margin: 0;
+	padding: 0;
+}

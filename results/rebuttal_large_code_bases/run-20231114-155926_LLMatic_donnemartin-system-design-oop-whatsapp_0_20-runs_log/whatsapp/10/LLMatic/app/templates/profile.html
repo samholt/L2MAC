@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Profile</h1>
+	<!-- Profile details -->
+	<form method="POST">
+		{{ form.hidden_tag() }}
+		<label for="profile_picture">Profile Picture:</label><br>
+		{{ form.profile_picture }}<br>
+		<label for="status_message">Status Message:</label><br>
+		{{ form.status_message }}<br>
+		<label for="privacy_settings">Privacy Settings:</label><br>
+		{{ form.privacy_settings }}<br>
+		{{ form.submit() }}
+	</form>
+{% endblock %}
+

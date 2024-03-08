@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Edit Profile</h2>
+  <form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.username.label }}
+      {{ form.username(class='form-control') }}
+    </div>
+    <div class="form-group">
+      {{ form.about_me.label }}
+      {{ form.about_me(class='form-control') }}
+    </div>
+    <div class="form-group">
+      {{ form.submit(class='btn btn-primary') }}
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,6 @@
+Task 1: Develop a web-based application
+- Define the application architecture
+- Design the user interface
+- Implement the backend logic
+- Test the application
+- Deploy the application

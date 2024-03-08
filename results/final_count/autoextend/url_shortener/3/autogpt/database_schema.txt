@@ -1,0 +1,11 @@
+Table: urls
+Columns:
+  - id: Integer, Primary Key, Auto Increment
+  - original_url: String, Not Null
+  - short_url: String, Not Null, Unique
+  - created_at: DateTime, Not Null
+  - updated_at: DateTime, Not Null
+
+Indexes:
+  - Index on short_url (unique)
+  - Index on original_url

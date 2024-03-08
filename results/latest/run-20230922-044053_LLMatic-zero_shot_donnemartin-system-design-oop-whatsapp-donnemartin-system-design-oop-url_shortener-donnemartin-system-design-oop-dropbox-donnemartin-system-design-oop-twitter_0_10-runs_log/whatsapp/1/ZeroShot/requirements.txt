@@ -1,0 +1,12 @@
+flask
+flask_socketio
+flask_sqlalchemy
+flask_login
+flask_wtf
+flask_migrate
+email_validator
+passlib
+pyjwt
+pillow
+emoji
+

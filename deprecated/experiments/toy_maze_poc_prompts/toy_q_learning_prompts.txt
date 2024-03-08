@@ -1,0 +1,17 @@
+Idea; Iterate all possible turnings of the maze, then keep track of how they went. Then feed this back into the prompt there.
+
+Could even generalize this for refinement.
+
+Could even train a human evaluator model to evaluate all possible cases.
+
+System: You are an AI agent. You are exploring a maze. Your objective is to achieve the highest reward possible in an episode. Episode lengths are maximum of 100 steps, unless the maze is completed.
+Episode statistics: Trajectory step 50, Episode reward -10
+State: Location (5,6)
+Possible vector translation actions: Up (0,1), Right (1,0)
+Decided action: Right
+What is the new state and episode statistics?
+
+
+Higher level agent:
+
+Possible actions: Left (0.5), Right (0.6), Up (0.8), Down (0.2)

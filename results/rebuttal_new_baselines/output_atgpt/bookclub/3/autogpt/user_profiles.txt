@@ -1,0 +1,1 @@
+User Profiles functionality will allow users to create and manage their profiles. It will include features like creating a profile, editing profile information, viewing other users' profiles, etc.

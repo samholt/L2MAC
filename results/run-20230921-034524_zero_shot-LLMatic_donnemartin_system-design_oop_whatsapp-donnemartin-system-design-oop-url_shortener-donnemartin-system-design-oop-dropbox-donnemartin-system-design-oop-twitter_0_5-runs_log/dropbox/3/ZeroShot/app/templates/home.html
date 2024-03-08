@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+	<h1>Welcome, {{ current_user.username }}!</h1>
+	<form action="{{ url_for('logout') }}" method="post">
+		<button type="submit">Logout</button>
+	</form>
+	<form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+		<input type="file" name="file">
+		<button type="submit">Upload</button>
+	</form>
+	<h2>Your Files</h2>
+	<ul>
+	{% for file in files %}
+		<li>
+			<a href="{{ url_for('download', file_id=file.id) }}">{{ file.filename }}</a>
+			<form action="{{ url_for('share', file_id=file.id) }}" method="post">
+				<input type="text" name="username" placeholder="Username to share with">
+				<button type="submit">Share</button>
+			</form>
+		</li>
+	{% endfor %}
+	</ul>
+	<h2>Shared Files</h2>
+	<ul>
+	{% for shared_file in shared_files %}
+		<li>
+			<a href="{{ url_for('download', file_id=shared_file.file_id) }}">{{ shared_file.file.filename }}</a>
+		</li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

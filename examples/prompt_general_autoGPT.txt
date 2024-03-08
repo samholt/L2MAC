@@ -1,0 +1,100 @@
+Objective: Write code for a large system design task.
+
+You must act autonomously and you will receive no human input at any stage. You have to return as output the complete code for completing this task, and correctly incorporate it into the existing code base.
+                          
+Provide the minimal code necessary to achieve the task conditioned on the existing generated code---including changing the existing generated code.
+
+You cannot visualize any graphical output.
+
+You can write to local files, however you cannot use any databases, as none are setup in the local environment.
+
+You will get instructions for code to write.
+You will write a very long answer. Make sure that every detail of the architecture is, in the end, implemented as code.
+
+Think step by step and reason yourself to the right decisions to make sure we get it right.
+First lay out the names of the core classes, functions, methods that will be necessary, As well as a quick comment on their purpose.
+
+Do not comment on what every file does. Please note that the code should be fully functional. No placeholders.
+
+You will start with the "entrypoint" file, then go to the ones that are imported by that file, and so on.
+Please note that the code should be fully functional. No placeholders.
+
+Follow a language and framework appropriate best practice file naming convention.
+Make sure that files contain all imports, types etc.  The code should be fully functional. Make sure that code in different files are compatible with each other.
+When writing code if you are unsure, write a plausible implementation.
+Include module dependency or package manager dependency definition file.
+
+Useful to know:
+                        
+Always use the programming language the user asks for.
+Default to use Python when not specified where applicable.
+Always write tests with the prefix test_.
+For Python, you always create an appropriate requirements.txt file.
+For NodeJS, you always create an appropriate package.json file.
+Always add a comment briefly describing the purpose of the function definition.
+Add comments explaining very complex bits of logic.
+Always follow the best practices for the requested languages for folder/file structure and how to package the project.
+You can use any package and any other packages you wish to install.
+
+
+Python toolbelt preferences:
+- pytest
+- dataclasses
+
+Objective:```
+**1. Service Name:** "CloudSafe"
+
+**2. Objective:** To provide users with a secure, reliable, and easily accessible platform to store, share, and manage their digital files.
+
+**Functional Requirements to implement**:
+
+1. User Account Management:
+   - 1.1 User Registration:
+     - [ ] Requires Name, Email, Password.
+   - 1.2 User Login:
+     - [ ] Uses Email and password authentication.
+     - [ ] Has Forgot password functionality.
+   - 1.3 User Profile:
+     - [ ] Shows Profile picture, name, email.
+     - [ ] Provides change password option.
+     - [ ] Displays storage used/remaining.
+
+2. File Management:
+   - 2.1 File Upload:
+     - [ ] Supports drag and drop.
+     - [ ] Enforces file size and type restrictions.
+   - 2.2 File Download:
+     - [ ] Provides direct download link.
+     - [ ] Offers download folder as ZIP option.
+   - 2.3 File/Folder Organization:
+     - [ ] Allows creating folders.
+     - [ ] Allows renaming, moving, and deleting files/folders.
+   - 2.4 File Versioning:
+     - [ ] Maintains historical versions of files.
+     - [ ] Gives an option to restore to previous versions.
+
+3. File Sharing:
+   - 3.1 Shareable Links:
+     - [ ] Can generate shareable URL links for files/folders.
+     - [ ] Provides expiry date and password protection options.
+   - 3.2 Shared Folders:
+     - [ ] Allows inviting users via email.
+     - [ ] Allows setting permissions (view, edit, delete).
+
+4. Security:
+   - 4.1 Encryption:
+     - [ ] Encrypts files at rest and in transit.
+   - 4.2 Activity Log:
+     - [ ] Tracks user actions like uploads, downloads, shares, etc.
+
+6. UI/UX:
+   - 6.1 Responsive Design:
+     - [ ] Suitable for web, mobile, and tablet views.
+   - 6.2 Themes:
+     - [ ] Offers light and dark modes.
+   - 6.3 File Preview:
+     - [ ] Provides thumbnails for images, videos.
+     - [ ] Contains document viewers for common file types.
+```
+                        
+Understand the problem, by creating a detailed step-by-step plan. Try to solve the problem in the minimal steps necessary. Create additional tests, checks and evaluation at each step when applicable to help make excellent code implementation, where all the code is fully functional. Use best software design practices, and you can output large amounts of code at once. The last step should be running any tests automatically if they exist, and the penultimate step writing these tests. You will receive no human input at any stage, so you cannot use a human to test. Only create a detailed plan to begin with, which includes designing and running tests to check that they all pass.

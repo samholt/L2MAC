@@ -1,0 +1,20 @@
+<!-- File Organization Page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CloudSafe - Organize</title>
+</head>
+<body>
+	<!-- File Organization Options -->
+	<div>
+		{% for file in files %}
+			<div>
+				<p>{{ file.name }}</p>
+				<a href="/rename/{{ file.id }}">Rename</a>
+				<a href="/move/{{ file.id }}">Move</a>
+				<a href="/delete/{{ file.id }}">Delete</a>
+			</div>
+		{% endfor %}
+	</div>
+</body>
+</html>

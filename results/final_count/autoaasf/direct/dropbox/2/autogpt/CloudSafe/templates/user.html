@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>User Profile</h2>
+  <p><strong>Username:</strong> {{ user.username }}</p>
+  <p><strong>About Me:</strong> {{ user.about_me }}</p>
+  <a href="{{ url_for('edit_profile') }}" class="btn btn-primary">Edit Profile</a>
+{% endblock %}

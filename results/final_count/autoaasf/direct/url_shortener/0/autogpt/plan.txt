@@ -1,0 +1,9 @@
+1. Outline the core classes, functions, and methods required for the URL shortening service.
+2. Implement the code for each step, ensuring that the code is fully functional and follows best practices.
+3. Incorporate necessary tests, checks, and evaluations at each step to ensure excellent code implementation.
+4. Automatically run the tests, if available, to verify the functionality of the implemented code.
+5. Design and write additional tests to check the functionality of the code and ensure all tests pass.
+6. Create the entrypoint file (main.py).
+7. Create the URLShortener class (url_shortener.py).
+8. Create the tests file (test_url_shortener.py).
+9. Create the requirements file (requirements.txt).

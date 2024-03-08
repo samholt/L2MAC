@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Book Club</title>
+</head>
+<body>
+	<h1>Edit Book Club</h1>
+	<form method="POST">
+		<label for="new_name">New Name:</label><br>
+		<input type="text" id="new_name" name="new_name" value="{{ book_club.name }}"><br>
+		<label for="description">Description:</label><br>
+		<input type="text" id="description" name="description" value="{{ book_club.description }}"><br>
+		<label for="is_private">Is Private:</label><br>
+		<input type="checkbox" id="is_private" name="is_private" {% if book_club.is_private %}checked{% endif %}><br>
+		<input type="submit" value="Update">
+	</form>
+</body>
+</html>

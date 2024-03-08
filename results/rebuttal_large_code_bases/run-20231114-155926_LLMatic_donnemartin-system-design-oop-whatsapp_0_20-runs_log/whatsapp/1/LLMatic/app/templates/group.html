@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Group</title>
+</head>
+<body>
+	<h1>Group</h1>
+	<form>
+		<label for='group_name'>Group Name:</label><br>
+		<input type='text' id='group_name' name='group_name'><br>
+		<label for='group_picture'>Group Picture:</label><br>
+		<input type='file' id='group_picture' name='group_picture'><br>
+		<h2>Participants</h2>
+		<ul id='participants_list'>
+			<!-- Participants will be dynamically added here -->
+		</ul>
+		<button id='add_participant'>Add Participant</button>
+		<button id='remove_participant'>Remove Participant</button>
+		<h2>Admin Roles and Permissions</h2>
+		<form>
+			<label for='admin_roles'>Admin Roles:</label><br>
+			<input type='text' id='admin_roles' name='admin_roles'><br>
+			<label for='admin_permissions'>Admin Permissions:</label><br>
+			<input type='text' id='admin_permissions' name='admin_permissions'><br>
+			<input type='submit' value='Set Admin Roles and Permissions'>
+		</form>
+	</form>
+</body>
+</html>

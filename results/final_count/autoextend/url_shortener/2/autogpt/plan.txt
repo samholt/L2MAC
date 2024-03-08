@@ -1,0 +1,11 @@
+1. Generate a detailed step-by-step plan for implementing the online URL shortening service, including the names of core classes, functions, and methods.
+2. Implement the code for each functional requirement, ensuring the system validates URLs, generates unique shortened URLs, allows custom short links, and handles redirection.
+3. Implement the code for analytics, allowing users to view statistics, number of clicks, date/time of each click, and geographical location of the clicker.
+4. Implement the code for user accounts, including account creation, viewing shortened URLs, editing or deleting URLs, and viewing analytics.
+5. Implement the code for the admin dashboard, enabling administrators to view shortened URLs, delete URLs or user accounts, and monitor system performance and analytics.
+6. Implement the code for URL expiration, allowing users to set an expiration date/time for shortened URLs.
+7. Entrypoint file: main.py
+8. Core classes: URLShortener, User, Admin
+9. Core functions/methods: shorten_url, validate_url, generate_shortened_url, redirect_to_original_url, view_statistics, create_account, edit_url, delete_url, view_analytics, view_shortened_urls, delete_user_account, monitor_performance, set_url_expiration
+10. Test files: test_main.py, test_url_shortener.py, test_user.py, test_admin.py
+11. Dependency file: requirements.txt

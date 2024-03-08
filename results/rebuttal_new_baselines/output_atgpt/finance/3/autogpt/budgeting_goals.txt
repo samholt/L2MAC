@@ -1,0 +1,4 @@
+Budgeting and Goals System: 
+- Set Monthly Budget Goals: Allow users to set monthly budget goals.
+- Alerts for Nearing or Exceeding Budget Limits: Send alerts to users when they are nearing or exceeding their budget limits.
+- Track Progress Towards Financial Goals: Enable users to track their progress towards their financial goals.

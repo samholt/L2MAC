@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post Status</title>
+</head>
+<body>
+	<form action="/post_status" method="post">
+		<label for="user_id">User ID:</label><br>
+		<input type="text" id="user_id" name="user_id"><br>
+		<label for="image">Image URL:</label><br>
+		<input type="text" id="image" name="image"><br>
+		<label for="visibility">Visibility:</label><br>
+		<select id="visibility" name="visibility">
+			<option value="public">Public</option>
+			<option value="private">Private</option>
+		</select><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

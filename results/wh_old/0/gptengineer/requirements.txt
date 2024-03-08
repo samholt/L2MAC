@@ -1,0 +1,8 @@
+Flask==1.1.2
+Flask-SQLAlchemy==2.4.4
+Flask-Login==0.5.0
+Flask-SocketIO==5.0.1
+Flask-WTF==0.14.3
+Flask-Uploads==0.2.1
+cryptography==3.4.7
+Werkzeug==1.0.1

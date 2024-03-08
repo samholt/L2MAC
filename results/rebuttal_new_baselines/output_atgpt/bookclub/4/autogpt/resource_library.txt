@@ -1,0 +1,4 @@
+Resource Name
+Resource Description
+Resource Type
+Resource Link

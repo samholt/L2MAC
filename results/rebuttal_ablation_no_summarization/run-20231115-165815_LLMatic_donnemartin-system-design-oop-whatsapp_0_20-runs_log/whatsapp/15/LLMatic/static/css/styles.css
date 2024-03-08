@@ -1,0 +1,55 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	width: 80%;
+	margin: auto;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.form-group button {
+	padding: 10px 20px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.form-group button:disabled {
+	background-color: #ccc;
+}
+
+#messages {
+	width: 100%;
+	height: 300px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	overflow-y: scroll;
+}
+
+#group-participants,
+#group-admins {
+	width: 100%;
+	height: 100px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	overflow-y: scroll;
+}

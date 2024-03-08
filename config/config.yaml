@@ -1,0 +1,77 @@
+run:
+  max_episodes: 1
+  log_path: ''
+  device: ''
+  # model: 'gpt-3.5-turbo'
+  model: 'gpt-4-0'
+  # model: 'gpt-4-32k'
+  # model: 'gpt-3.5-turbo-16k'
+  # model: 'gpt-35-turbo-16k-0'
+  # model: 'gpt-4-3'
+  # model: 'gpt-4-32k-0'
+  temperature: 0.01
+  top_p: 1
+  frequency_penalty: 0
+  presence_penalty: 0
+  stop: ""
+relentless:
+  lam: 10
+setup:
+  use_azure_api: true
+  debug_mode: true
+  flush_mode: false
+  multi_process_results: false
+  multi_process_cores: 4
+  experiment: 'MAIN_TABLE'
+  # methods_to_evaluate: ['LLMatic', 'ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion', 'ZeroShot']
+  # methods_to_evaluate: ['ZeroShot', 'SelfRefine', 'Reflexion']
+  # methods_to_evaluate: ['SelfRefine', 'CodeT', 'Reflexion']
+  # methods_to_evaluate: ['LLMatic', 'zero_shot', 'self-refine', 'CodeT', 'reflexion']
+  # methods_to_evaluate: ['LLMatic', 'ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion']
+  # methods_to_evaluate: ['ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion']
+  methods_to_evaluate: ['LLMatic']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-whatsapp']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-url_shortener']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-recipe']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-twitter']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-bookclub']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-finance']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-eventplanner']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-recipe']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-whatsapp']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-whatsapp', 'donnemartin-system-design-oop-url_shortener']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-dropbox', 'donnemartin-system-design-oop-twitter']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-recipe', 'donnemartin-system-design-oop-eventplanner']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-elearn']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-recipe']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-whatsapp', 'donnemartin-system-design-oop-url_shortener', 'donnemartin-system-design-oop-recipe', 'donnemartin-system-design-oop-twitter']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-url_shortener']
+  # envs_to_evaluate: ['insight-large-code-base-flaskbb'] # Pretty good actually! Working ones ['insight-large-code-base-flaskbb', 'insight-large-code-base-flask_jsondash', 'insight-large-code-base-solara']
+  # envs_to_evaluate: ['insight-large-code-base-redash'] # Pretty good actually!
+  # envs_to_evaluate: ['insight-large-code-base-flask_jsondash'] # Pretty good actually!
+  # envs_to_evaluate: ['insight-large-code-base-solara'] # Pretty good actually!
+  # envs_to_evaluate: ['insight-large-code-base-skylines'] # Pretty good actually!
+  # envs_to_evaluate: ['insight-large-code-base-quokka'] # Pretty good actually!
+  # envs_to_evaluate: ['insight-large-code-base-indico']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-bookclub2']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-finance2', 'donnemartin-system-design-oop-bookclub2']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-finance', 'donnemartin-system-design-oop-bookclub']
+  # envs_to_evaluate: ['donnemartin-system-design-oop-whatsapp', 'donnemartin-system-design-oop-url_shortener', 'donnemartin-system-design-oop-dropbox', 'donnemartin-system-design-oop-twitter', 'donnemartin-system-design-oop-recipe', 'donnemartin-system-design-oop-eventplanner', 'donnemartin-system-design-oop-finance', 'donnemartin-system-design-oop-bookclub']
+  wandb:
+    project: LLMatic
+    track: false
+  log_dir: logs
+  torch_deterministic: true
+  seed_start: 0
+  seed_runs: 20
+  enable_tests: true
+  # seed_runs: 20
+  cuda: true
+  data_science_env_use_description: false
+  open_ai_rate_limit_requests_per_minute: 3000
+  api_retry_with_exponential_backoff__initial_delay: 1
+  api_retry_with_exponential_backoff__exponential_base: 2
+  api_retry_with_exponential_backoff__jitter: true
+  api_retry_with_exponential_backoff__max_retries: 10
+  api_request_timeout: 60000
+  api_stream: False

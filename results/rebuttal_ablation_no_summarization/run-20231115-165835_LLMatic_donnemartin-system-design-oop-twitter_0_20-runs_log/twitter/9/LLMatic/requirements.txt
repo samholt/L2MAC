@@ -1,0 +1,6 @@
+Flask
+Flask-SQLAlchemy
+Flask-WTF
+Werkzeug
+Flask-JWT-Extended
+pytest

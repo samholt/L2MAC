@@ -1,0 +1,1 @@
+Take the existing code base and implement the following feature: On the home page show the statistic of the total flights recorded on the platform.

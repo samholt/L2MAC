@@ -1,0 +1,5 @@
+Book Name
+Book Description
+Book Author
+Book Genre
+Book Votes

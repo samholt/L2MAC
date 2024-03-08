@@ -1,0 +1,30 @@
+### **Personal Finance Tracking Application**
+
+**Overview**:
+A comprehensive tool for managing personal finances, including tracking expenses, incomes, investments, and setting budget goals.
+
+**Functional Requirements to implement**:
+
+1. **Account and Security**:
+   - [ ] 1.1. Users can create and manage their personal account.
+   - [ ] 1.2. Secure linking of bank accounts.
+   - [ ] 1.3. Multi-factor authentication for enhanced security.
+
+2. **Expense and Income Tracking**:
+   - [ ] 2.1. Manual and automatic import of expenses and incomes.
+   - [ ] 2.2. Categorization of expenses and income sources.
+   - [ ] 2.3. Visualization of expense and income history.
+
+3. **Budget Management**:
+   - [ ] 3.1. Setting and adjusting monthly budget goals.
+   - [ ] 3.2. Alerts for nearing budget limits.
+   - [ ] 3.3. Analysis of spending patterns to suggest budget adjustments.
+
+4. **Investment Overview**:
+   - [ ] 4.1. Integration with investment accounts.
+   - [ ] 4.2. Tracking investment performance and balance.
+   - [ ] 4.3. Overview of asset allocation.
+
+5. **Reports and Alerts**:
+   - [ ] 5.1. Generation of financial reports (e.g., monthly summaries).
+   - [ ] 5.2. Customizable alerts for unusual spending or important reminders.

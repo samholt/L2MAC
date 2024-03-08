@@ -1,0 +1,4 @@
+Analytics and Reporting System: 
+- Monthly Financial Reports: Generate monthly financial reports for users.
+- Visual Analytics for Spending Habits and Trends: Provide visual analytics to help users understand their spending habits and trends.
+- Year-on-Year Financial Comparison: Enable users to compare their financial situation year-on-year.

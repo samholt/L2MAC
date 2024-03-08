@@ -1,0 +1,9 @@
+flask
+flask-login
+flask-sqlalchemy
+flask-wtf
+flask-bcrypt
+flask-mail
+werkzeug
+pytest
+pytest-flask

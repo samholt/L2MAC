@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+</head>
+<body>
+	<h1>Welcome, {{ username }}</h1>
+	<h2>Your URLs</h2>
+	<ul>
+	{% for short_url, original_url in urls.items() %}
+		<li>
+			<a href="/{{ short_url }}">{{ short_url }}</a> : {{ original_url }}
+			<a href="/edit/{{ username }}/{{ short_url }}">Edit</a>
+			<a href="/delete/{{ username }}/{{ short_url }}">Delete</a>
+		</li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

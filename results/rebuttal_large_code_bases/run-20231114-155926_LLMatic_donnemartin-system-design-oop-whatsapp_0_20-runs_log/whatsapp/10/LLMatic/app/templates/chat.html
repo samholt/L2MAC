@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+	<div class="content-section">
+		<form method="POST" action="">
+			{{ form.hidden_tag() }}
+			<fieldset class="form-group">
+				<div class="form-group">
+					{{ form.content.label(class="form-control-label") }}
+					{{ form.content(class="form-control form-control-lg") }}
+				</div>
+				<div class="form-group">
+					{{ form.receiver.label(class="form-control-label") }}
+					{{ form.receiver(class="form-control form-control-lg") }}
+				</div>
+			</fieldset>
+			<div class="form-group">
+				<input class="btn btn-outline-info" type="submit" value="Send">
+			</div>
+		</form>
+		<div class="message-section">
+			{% for message in messages %}
+				<p>{{ message.content }}</p>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock content %}

@@ -1,0 +1,6 @@
+Flask
+Flask-SQLAlchemy
+Flask-Login
+Flask-WTF
+Pillow
+Flask-SocketIO

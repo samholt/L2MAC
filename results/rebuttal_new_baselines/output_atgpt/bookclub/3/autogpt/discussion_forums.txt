@@ -1,0 +1,1 @@
+Discussion Forums functionality will allow users to discuss books and share their thoughts and opinions. It will include features like creating a discussion thread, commenting on a thread, liking a comment, etc.

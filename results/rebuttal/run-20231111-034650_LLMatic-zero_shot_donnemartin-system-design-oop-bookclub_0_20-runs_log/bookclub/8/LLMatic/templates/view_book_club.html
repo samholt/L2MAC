@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View Book Club</title>
+</head>
+<body>
+	<h1>{{ book_club.name }}</h1>
+	<p>{{ book_club.description }}</p>
+	<p>Private: {{ book_club.is_private }}</p>
+	<p>Admin: {{ book_club.admin }}</p>
+	<a href="{{ url_for('edit_book_club', name=book_club.name) }}">Edit</a>
+	<a href="{{ url_for('delete_book_club', name=book_club.name) }}">Delete</a>
+</body>
+</html>

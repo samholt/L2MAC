@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Admin Dashboard</title>
+	</head>
+	<body>
+		<h1>User Activities</h1>
+		{% for activity in user_activities %}
+			<p>{{ activity }}</p>
+		{% endfor %}
+		<h1>System Performance</h1>
+		{% for performance in system_performance %}
+			<p>{{ performance }}</p>
+		{% endfor %}
+		<h1>Vendor Listings</h1>
+		{% for listing in vendor_listings %}
+			<p>{{ listing }}</p>
+		{% endfor %}
+	</body>
+</html>

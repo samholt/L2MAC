@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Sign In</h2>
+  <form action="" method="post">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.email.label }}
+      {{ form.email(class='form-control') }}
+    </div>
+    <div class="form-group">
+      {{ form.password.label }}
+      {{ form.password(class='form-control') }}
+    </div>
+    <div class="form-group">
+      {{ form.remember_me() }} {{ form.remember_me.label }}
+    </div>
+    <div class="form-group">
+      {{ form.submit(class='btn btn-primary') }}
+    </div>
+  </form>
+{% endblock %}

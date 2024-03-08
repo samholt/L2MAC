@@ -1,0 +1,6 @@
+Discussion Forums functionality will include:
+1. Creating a new discussion thread
+2. Posting comments in a discussion thread
+3. Upvoting and downvoting comments
+4. Reporting inappropriate comments
+5. Moderating discussion threads

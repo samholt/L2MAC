@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Status</h1>
+	<form method="POST">
+		{{ form.hidden_tag() }}
+		<div class="form-group">
+			{{ form.content.label(class="form-control-label") }}
+			{{ form.content(class="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ form.submit(class="btn btn-primary") }}
+		</div>
+	</form>
+	<hr>
+	{% for status in statuses %}
+		<div class="media">
+			<div class="media-body">
+				<h5 class="mt-0">{{ status.user.username }}</h5>
+				<p>{{ status.content }}</p>
+				<small class="text-muted">Posted on {{ status.timestamp }}</small>
+			</div>
+		</div>
+		<hr>
+	{% endfor %}
+{% endblock %}

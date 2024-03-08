@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Contacts</h1>
+	<ul>
+		{% for contact in user.contacts %}
+			<li>{{ contact }}</li>
+		{% endfor %}
+	</ul>
+	<form method="POST">
+		{{ form.hidden_tag() }}
+		<div class="form-group">
+			{{ form.email.label(class="form-control-label") }}
+			{{ form.email(class="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ form.submit(class="btn btn-primary") }}
+		</div>
+	</form>
+{% endblock %}

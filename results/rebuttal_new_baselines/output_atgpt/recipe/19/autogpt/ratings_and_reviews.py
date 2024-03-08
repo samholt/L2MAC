@@ -1,0 +1,13 @@
+class RatingsAndReviews:
+    def __init__(self):
+        self.ratings = []
+        self.reviews = []
+
+    def rate_recipe(self, user_id, recipe_id, rating):
+        # TODO: Implement function
+
+    def write_review(self, user_id, recipe_id, review):
+        # TODO: Implement function
+
+    def display_average_rating(self, recipe_id):
+        # TODO: Implement function

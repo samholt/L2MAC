@@ -1,0 +1,5 @@
+Income and Expense Tracking System: 
+- Manual Entry: Allow users to manually enter income and expense data.
+- Upload Data: Provide an option for users to upload income and expense data.
+- Categorize Transactions: Enable users to categorize their transactions for better tracking.
+- Classify Recurring Transactions: Automatically classify recurring transactions to save user time.

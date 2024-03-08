@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Groups</h1>
+	<ul>
+		{% for group in groups %}
+			<li>{{ group.name }}</li>
+		{% endfor %}
+	</ul>
+	<form method="POST">
+		{{ form.hidden_tag() }}
+		<div class="form-group">
+			{{ form.name.label(class="form-control-label") }}
+			{{ form.name(class="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ form.picture.label(class="form-control-label") }}
+			{{ form.picture(class="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ form.participants.label(class="form-control-label") }}
+			{{ form.participants(class="form-control") }}
+		</div>
+		<div class="form-group">
+			{{ form.submit(class="btn btn-primary") }}
+		</div>
+	</form>
+{% endblock %}

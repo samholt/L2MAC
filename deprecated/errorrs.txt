@@ -1,0 +1,80 @@
+ ['files']}}], 'engine': 'gpt4_20230815', 'api_key': 'dda3fe62c9e1414fb19226427867c206', 'api_version': '2023-07-01-preview', 'api_base': 'https://vdslabazuremloai-uksouth.openai.azure.com/', 'api_type': 'azure'}
+
+^A^A^CTraceback (most recent call last):
+  File "/home/sam/code/DecentralizedGPTsCode/run.py", line 166, in <module>
+    run()
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/home/sam/code/DecentralizedGPTsCode/run.py", line 70, in run
+    main(config, wandb, logger, rate_limiter)
+  File "/home/sam/code/DecentralizedGPTsCode/run.py", line 92, in main
+    result = evaluate_policy_single(args_for_run)
+  File "/home/sam/code/DecentralizedGPTsCode/run.py", line 135, in run_exp_wrapper_outer
+    result = run_exp_wrapper(args, logger, **kwargs)
+  File "/home/sam/code/DecentralizedGPTsCode/run.py", line 118, in run_exp_wrapper
+    result = run_exp(env_name=env_name,
+  File "/home/sam/code/DecentralizedGPTsCode/run.py", line 154, in run_exp
+    result = simulate(env_name,
+  File "/home/sam/code/DecentralizedGPTsCode/simulate.py", line 46, in simulate
+    result = loop()
+  File "/home/sam/code/DecentralizedGPTsCode/simulate.py", line 30, in loop
+    action = agent.run(state)
+  File "/home/sam/code/DecentralizedGPTsCode/agents.py", line 362, in run
+    self._run(state)
+  File "/home/sam/code/DecentralizedGPTsCode/agents.py", line 416, in _run
+    initial_response_message = self.get_llm_response(self.meta_messages)
+  File "/home/sam/code/DecentralizedGPTsCode/agents.py", line 348, in get_llm_response
+    response = chat_completion_rl(**llm_config)
+  File "/home/sam/code/DecentralizedGPTsCode/llm_utils.py", line 252, in chat_completion_rl
+    return chat_completion_rl_inner(**kwargs)
+  File "/home/sam/code/DecentralizedGPTsCode/llm_utils.py", line 326, in chat_completion_rl_inner
+    response = openai.ChatCompletion.create(**kwargs)
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/openai/api_resources/chat_completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/openai/api_resources/abstract/engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/openai/api_requestor.py", line 288, in request
+    result = self.request_raw(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/openai/api_requestor.py", line 596, in request_raw
+    result = _thread_context.session.request(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/urllib3/connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/urllib3/connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/site-packages/urllib3/connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/http/client.py", line 1371, in getresponse
+    response.begin()
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/http/client.py", line 319, in begin
+    version, status, reason = self._read_status()
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/http/client.py", line 280, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/ssl.py", line 1241, in recv_into
+    return self.read(nbytes, buffer)
+  File "/home/sam/anaconda3/envs/decgpt/lib/python3.9/ssl.py", line 1099, in read
+    return self._sslobj.read(len, buffer)
+KeyboardInterrupt
+MainProcess| 2023-09-20 22:40:03,366,366 multiprocessing INFO process shutting down
+
+(decgpt) sam@lm-adastra:~/code/DecentralizedGPTsCode$ 

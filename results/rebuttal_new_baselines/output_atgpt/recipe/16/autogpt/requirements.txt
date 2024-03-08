@@ -1,0 +1,5 @@
+# List of Python packages required for the project
+
+# Example:
+# flask==1.1.2
+# flask_sqlalchemy==2.4.4

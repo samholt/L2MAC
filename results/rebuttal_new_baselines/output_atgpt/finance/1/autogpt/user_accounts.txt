@@ -1,0 +1,3 @@
+function recoverPassword(username, email) {
+  // Password recovery logic goes here
+}

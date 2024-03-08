@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Status Page</title>
+</head>
+<body>
+	<h1>Statuses</h1>
+	<ul>
+		{% for status in statuses %}
+			<li>{{ status.text }}</li>
+		{% endfor %}
+	</ul>
+	<form method="POST" action="/post_status">
+		<input type="text" name="status" placeholder="What's on your mind?">
+		<input type="submit" value="Post">
+	</form>
+	<h2>Privacy Settings</h2>
+	<form method="POST" action="/update_privacy">
+		<label for="privacy">Who can see your statuses?</label>
+		<select name="privacy">
+			<option value="public">Public</option>
+			<option value="friends">Friends</option>
+			<option value="private">Only Me</option>
+		</select>
+		<input type="submit" value="Update">
+	</form>
+</body>
+</html>

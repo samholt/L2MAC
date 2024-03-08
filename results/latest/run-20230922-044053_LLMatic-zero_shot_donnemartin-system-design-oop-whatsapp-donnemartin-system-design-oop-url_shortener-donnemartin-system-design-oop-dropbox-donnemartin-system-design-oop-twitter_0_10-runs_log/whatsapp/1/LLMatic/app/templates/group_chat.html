@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Group Chat</title>
+</head>
+<body>
+	<h1>Group Chat</h1>
+	<form method="POST">
+		<input type="text" name="text" placeholder="Message" required>
+		<input type="submit" value="Send">
+	</form>
+	<div>
+		{% for message in messages %}
+			<p>{{ message.text }}</p>
+		{% endfor %}
+	</div>
+</body>
+</html>

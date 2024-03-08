@@ -1,0 +1,1 @@
+Notifications and Alerts functionality will keep users informed about updates and events related to their book clubs. It will include features like sending notifications, setting alerts, managing notification settings, etc.

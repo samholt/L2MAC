@@ -1,0 +1,1 @@
+This file represents the directory structure for the Virtual Book Club platform. Subdirectories will be created for each core functionality.

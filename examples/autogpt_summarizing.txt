@@ -1,0 +1,25 @@
+  Cycle budget: 10000; remaining: 1
+  Creating chat completion with model gpt-3.5-turbo, temperature 0.0, max_tokens 1024
+  
+============== ChatSequence ==============
+Length: 572 tokens; 1 messages
+------------------ USER ------------------
+Your task is to create a concise running summary of actions and information results in the provided text, focusing on key and potentially important information to remember.
+
+You will receive the current summary and your latest actions. Combine them, adding relevant key information from the latest development in 1st person past tense and keeping the summary concise.
+
+Summary So Far:
+"""
+I received a message to write an implementation plan to a file named "implementation_plan.txt". The plan includes the following steps: 1. Outline the architecture, 2. Identify core classes and functions, 3. Plan the implementation, 4. Write tests, 5. Implement code, 6. Run tests, 7. Provide complete codebase.
+
+In response to the latest development, I wrote an architecture outline to a file named "architecture_outline.txt". The outline includes the following sections: 1. Frontend - User interface for submitting URLs and displaying shortened URLs, 2. Backend - API for receiving and processing URL requests, URL shortening logic, and a database for storing original and shortened URLs, 3. Tests - Unit tests for core functionality and integration tests for API and database interactions.
+
+Additionally, I wrote core classes and functions to a file named "core_classes_and_functions.txt". The core classes and functions include: 1. URLShortener - shorten_url(original_url: str) -> str, get_original_url(shortened_url: str) -> str, 2. Database - store_url_mapping(original_url: str, shortened_url: str), get_original_url(shortened_url: str) -> str, get_shortened_url(original_url: str) -> str, 3. API - POST /shorten, GET /{shortened_url}.
+"""
+
+Latest Development:
+"""
+[Message(role='you', content='{"command": {"name": "write_to_file", "args": {"filename": "implementation_plan_details.txt", "text": "1. Implement the URLShortener class\\n  - Write the shorten_url method\\n  - Write the get_original_url method\\n2. Implement the Database class\\n  - Write the store_url_mapping method\\n  - Write the get_original_url method\\n  - Write the get_shortened_url method\\n3. Implement the API\\n  - Write the POST /shorten endpoint\\n  - Write the GET /{shortened_url} endpoint\\n4. Write unit tests for the URLShortener and Database classes\\n5. Write integration tests for the API\\n6. Implement the frontend\\n  - Design the user interface\\n  - Connect the frontend to the API\\n7. Run tests and ensure all tests pass\\n8. Package the complete codebase"}}}', type='ai_response')]
+"""
+
+==========================================

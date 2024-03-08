@@ -1,0 +1,7 @@
+Book Club Name
+Book Club Description
+Book Club Members
+Current Book
+Past Books
+Future Books
+Meeting Schedule

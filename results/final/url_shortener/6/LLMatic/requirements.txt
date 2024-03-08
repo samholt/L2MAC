@@ -1,0 +1,4 @@
+flask==1.1.2
+pytest==6.2.4
+requests==2.25.1
+mock==4.0.3

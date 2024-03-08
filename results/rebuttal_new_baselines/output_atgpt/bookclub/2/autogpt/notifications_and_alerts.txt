@@ -1,0 +1,6 @@
+Notifications and Alerts functionality will include:
+1. Sending notifications for new meetings and events
+2. Alerting users about new discussion threads and comments
+3. Notifying users about book nominations and voting
+4. Alerting users about updates to their user profiles
+5. Sending reminders for upcoming meetings and deadlines

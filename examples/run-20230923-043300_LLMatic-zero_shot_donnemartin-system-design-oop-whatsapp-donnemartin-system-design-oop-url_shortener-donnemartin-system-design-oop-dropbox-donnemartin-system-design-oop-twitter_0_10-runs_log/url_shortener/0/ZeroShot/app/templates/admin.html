@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class='content-section'>
+		<h2 class='account-heading'>Admin Dashboard</h2>
+		<h3>Users</h3>
+		{% for user in users %}
+			<div class='media'>
+				<div class='media-body'>
+					<h5 class='mt-0'>{{ user.username }}</h5>
+					<form method='POST' action='{{ url_for('delete_user', user_id=user.id) }}' class='d-inline'>
+						<input type='submit' value='Delete' class='btn btn-outline-danger'>
+					</form>
+				</div>
+			</div>
+		{% endfor %}
+		<h3>URLs</h3>
+		{% for url in urls %}
+			<div class='media'>
+				<div class='media-body'>
+					<h5 class='mt-0'>{{ url.short_url }}</h5>
+					<p>{{ url.original_url }}</p>
+				</div>
+			</div>
+		{% endfor %}
+		<form method='POST' action='{{ url_for('delete_all_urls') }}' class='d-inline'>
+			<input type='submit' value='Delete All URLs' class='btn btn-outline-danger'>
+		</form>
+		<form method='POST' action='{{ url_for('delete_all_users') }}' class='d-inline'>
+			<input type='submit' value='Delete All Users' class='btn btn-outline-danger'>
+		</form>
+	</div>
+{% endblock content %}

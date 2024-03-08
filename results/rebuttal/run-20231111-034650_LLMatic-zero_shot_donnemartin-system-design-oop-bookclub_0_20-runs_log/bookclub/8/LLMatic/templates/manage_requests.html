@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manage Requests</title>
+</head>
+<body>
+	<h1>Manage Requests</h1>
+	{% for message in get_flashed_messages() %}
+		<p>{{ message }}</p>
+	{% endfor %}
+	{% for request_id, request in enumerate(book_club.admin.notifications) %}
+		<p>{{ request }}</p>
+		<form method='POST'>
+			<input type='hidden' name='request_id' value='{{ request_id }}'>
+			<input type='submit' name='action' value='Accept'>
+			<input type='submit' name='action' value='Reject'>
+		</form>
+	{% endfor %}
+	<a href='{{ url_for('view_book_club', name=book_club.name) }}'>Back to Book Club</a>
+</body>
+</html>

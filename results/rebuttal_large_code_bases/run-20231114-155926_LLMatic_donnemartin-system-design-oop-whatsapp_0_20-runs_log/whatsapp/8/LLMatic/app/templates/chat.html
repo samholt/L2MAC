@@ -1,0 +1,14 @@
+<form method="POST">
+	Message Content: <input type="text" name="message_content"><br>
+	Message Image: <input type="file" name="message_image"><br>
+	Message Emoji: <input type="text" name="message_emoji"><br>
+	Message GIF: <input type="text" name="message_gif"><br>
+	Message Sticker: <input type="text" name="message_sticker"><br>
+	<input type="submit" value="Send Message">
+</form>
+
+<ul>
+	{% for message in messages %}
+		<li>{{ message.content }}</li>
+	{% endfor %}
+</ul>

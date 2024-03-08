@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Profile</h1>
+		<div class="form-group">
+			<label for="status">Status:</label>
+			<input type="text" id="status" required>
+		</div>
+		<div class="form-group">
+			<button id="update-status">Update Status</button>
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

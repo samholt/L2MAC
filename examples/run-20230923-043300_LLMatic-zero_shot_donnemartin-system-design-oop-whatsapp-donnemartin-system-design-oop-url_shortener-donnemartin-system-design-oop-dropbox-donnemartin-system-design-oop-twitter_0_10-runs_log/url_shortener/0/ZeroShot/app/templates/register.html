@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class='content-section'>
+		<form method='POST'>
+			{{ form.hidden_tag() }}
+			<fieldset class='form-group'>
+				{{ form.username.label(class='form-control-label') }}
+				{{ form.username(class='form-control form-control-lg') }}
+				{{ form.password.label(class='form-control-label') }}
+				{{ form.password(class='form-control form-control-lg') }}
+				{{ form.confirm_password.label(class='form-control-label') }}
+				{{ form.confirm_password(class='form-control form-control-lg') }}
+			</fieldset>
+			<div class='form-group'>
+				{{ form.submit(class='btn btn-outline-info') }}
+			</div>
+		</form>
+	</div>
+{% endblock content %}

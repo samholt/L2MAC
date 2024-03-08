@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Dashboard</title>
+</head>
+<body>
+	<h1>Admin Dashboard</h1>
+	<h2>Users</h2>
+	<ul>
+	{% for username, password in users.items() %}
+		<li>{{ username }} <a href="{{ url_for('delete_user', username=username) }}">Delete</a></li>
+	{% endfor %}
+	</ul>
+	<h2>URLs</h2>
+	<ul>
+	{% for username, user_urls in urls.items() %}
+		<li>{{ username }}: 
+			<ul>
+			{% for short_url, original_url in user_urls.items() %}
+				<li>{{ short_url }}: {{ original_url }} <a href="{{ url_for('delete_admin_url', username=username, short_url=short_url) }}">Delete</a></li>
+			{% endfor %}
+			</ul>
+		</li>
+	{% endfor %}
+	</ul>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Meeting Scheduling functionality will include:
+1. Scheduling a new meeting
+2. Updating an existing meeting
+3. Cancelling a meeting
+4. Sending meeting invitations to book club members
+5. Integrating with external calendar apps

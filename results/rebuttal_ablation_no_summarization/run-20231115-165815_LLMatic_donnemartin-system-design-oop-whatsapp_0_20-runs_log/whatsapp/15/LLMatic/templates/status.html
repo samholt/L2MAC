@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Status</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Status</h1>
+		<div class="form-group">
+			<label for="status-visibility">Status Visibility:</label>
+			<select id="status-visibility">
+				<option value="public">Public</option>
+				<option value="contacts">Contacts</option>
+				<option value="private">Private</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<button id="update-status-visibility">Update Status Visibility</button>
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

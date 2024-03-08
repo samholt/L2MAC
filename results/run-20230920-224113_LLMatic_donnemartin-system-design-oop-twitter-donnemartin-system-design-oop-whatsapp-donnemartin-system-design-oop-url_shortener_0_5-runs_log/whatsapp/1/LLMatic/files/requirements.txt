@@ -1,0 +1,4 @@
+pytest==6.2.5
+pycryptodome==3.11.0
+pycryptodomex==3.11.0
+

@@ -1,0 +1,15 @@
+<!-- File Download Page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CloudSafe - Download</title>
+</head>
+<body>
+	<!-- File Download Links -->
+	<div>
+		{% for file in files %}
+			<a href="/download/{{ file.id }}">{{ file.name }}</a>
+		{% endfor %}
+	</div>
+</body>
+</html>

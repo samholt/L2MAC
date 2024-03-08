@@ -1,0 +1,6 @@
+Admin Dashboard functionality will include:
+1. Managing book clubs
+2. Managing user accounts
+3. Removing inappropriate content or users
+4. Providing analytics on user engagement and popular books
+5. Handling user reports and feedback

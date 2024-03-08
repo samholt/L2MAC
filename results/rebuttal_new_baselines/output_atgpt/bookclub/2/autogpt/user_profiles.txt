@@ -1,0 +1,6 @@
+User Profiles functionality will include:
+1. Creating a new user profile
+2. Updating an existing user profile
+3. Viewing other users' profiles
+4. Managing privacy settings
+5. Tracking reading history and recommendations

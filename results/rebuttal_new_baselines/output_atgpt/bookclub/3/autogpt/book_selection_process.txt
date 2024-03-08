@@ -1,0 +1,1 @@
+Book Selection Process functionality will allow users to select books for their book clubs. It will include features like suggesting a book, voting for a book, announcing the selected book, etc.

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Statuses</title>
+</head>
+<body>
+	<h2>Statuses</h2>
+	<form action="/user/status" method="post">
+		<label for="id">ID:</label><br>
+		<input type="text" id="id" name="id"><br>
+		<label for="image_data">Image Data:</label><br>
+		<input type="text" id="image_data" name="image_data"><br>
+		<input type="submit" value="Post">
+	</form>
+	<form action="/user/status_visibility" method="put">
+		<label for="visibility">Visibility:</label><br>
+		<input type="text" id="visibility" name="visibility"><br>
+		<input type="submit" value="Update">
+	</form>
+</body>
+</html>

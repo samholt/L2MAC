@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messages</title>
+</head>
+<body>
+	<h2>Messages</h2>
+	<form action="/user/message" method="post">
+		<label for="id">ID:</label><br>
+		<input type="text" id="id" name="id"><br>
+		<label for="content">Content:</label><br>
+		<input type="text" id="content" name="content"><br>
+		<input type="submit" value="Send">
+	</form>
+	<form action="/user/message/read" method="put">
+		<label for="message_id">Read Message:</label><br>
+		<input type="text" id="message_id" name="message_id"><br>
+		<input type="submit" value="Read">
+	</form>
+	<form action="/user/message/share" method="put">
+		<label for="message_id">Share Image:</label><br>
+		<input type="text" id="message_id" name="message_id"><br>
+		<label for="image_data">Image Data:</label><br>
+		<input type="text" id="image_data" name="image_data"><br>
+		<input type="submit" value="Share">
+	</form>
+</body>
+</html>

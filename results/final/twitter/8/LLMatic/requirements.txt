@@ -1,0 +1,5 @@
+flask==1.1.2
+flask-jwt-extended==4.3.0
+flask-sqlalchemy==2.4.4
+flask-migrate==2.5.3
+pytest==6.2.4

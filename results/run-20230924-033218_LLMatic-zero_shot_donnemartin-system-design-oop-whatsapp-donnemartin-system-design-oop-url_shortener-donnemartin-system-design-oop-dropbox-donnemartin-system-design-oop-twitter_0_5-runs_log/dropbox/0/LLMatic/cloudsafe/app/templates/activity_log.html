@@ -1,0 +1,15 @@
+<!-- Activity Log Page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CloudSafe - Activity Log</title>
+</head>
+<body>
+	<!-- Activity Log -->
+	<div>
+		{% for activity in activities %}
+			<p>{{ activity }}</p>
+		{% endfor %}
+	</div>
+</body>
+</html>

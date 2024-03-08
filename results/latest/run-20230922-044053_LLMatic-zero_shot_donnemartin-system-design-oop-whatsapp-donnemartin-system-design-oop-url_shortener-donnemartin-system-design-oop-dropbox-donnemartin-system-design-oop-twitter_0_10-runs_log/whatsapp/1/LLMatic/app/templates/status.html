@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Status</title>
+</head>
+<body>
+	<h1>Status</h1>
+	<form method="POST">
+		<input type="file" name="image" required>
+		<select name="visibility">
+			<option value="public">Public</option>
+			<option value="private">Private</option>
+		</select>
+		<input type="submit" value="Post">
+	</form>
+	<div>
+		{% for status in statuses %}
+			<img src="{{ url_for('static', filename=status.image) }}">
+		{% endfor %}
+	</div>
+</body>
+</html>

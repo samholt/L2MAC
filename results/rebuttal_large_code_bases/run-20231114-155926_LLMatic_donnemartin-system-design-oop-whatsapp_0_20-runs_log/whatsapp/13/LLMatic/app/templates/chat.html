@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+	<script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="chat-box">
+		</div>
+		<input type="text" id="message-text">
+		<button id="send-message">Send</button>
+	</div>
+</body>
+</html>

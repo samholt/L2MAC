@@ -1,0 +1,45 @@
+**Online Microblogging Service (OMS) - Description & Requirements**
+
+*Description:*  
+A web-based platform where registered users can post short text-based messages, view messages from others, follow/unfollow other users, and interact with posts. The platform provides features for both individual users and administrative management.
+
+**Functional Requirements to implement**:
+
+1. **User Management:**
+    1. **Registration & Authentication:**  
+        - [ ] Allow users to register using email, username, and password.
+        - [ ] Option to reset forgotten passwords.
+        - [ ] Secure authentication using JWT or similar protocols.
+    2. **Profile Management:**  
+        - [ ] Users can edit their profile information: profile picture, bio, website link, and location.
+        - [ ] Option to make profile private or public.
+
+2. **Posting & Content Management:**
+    1. **Creating Posts (Tweets):**  
+        - [ ] Allow users to create text-based posts with a limit of 280 characters.
+        - [ ] Option to include images in posts.
+        - [ ] Users can delete their own posts.
+    2. **Interacting with Posts:**  
+        - [ ] Users can like, retweet, and reply to posts.
+        - [ ] Nested comment structure for post replies.
+    3. **Content Filtering & Search:**  
+        - [ ] Users can search for specific posts or users using keywords.
+        - [ ] Filter option based on hashtags, user mentions, or trending topics.
+
+3. **Social Interaction:**
+    1. **Following & Followers:**  
+        - [ ] Users can follow/unfollow other users.
+        - [ ] A timeline view displays posts from followed users.
+        - [ ] Users receive notifications for new followers.
+    2. **Direct Messaging:**  
+        - [ ] Private conversation threads between users.
+        - [ ] Option to block/unblock users from messaging.
+    3. **Notifications:**  
+        - [ ] Users are notified of likes, retweets, replies, and mentions.
+
+4. **Trending & Discovery:**
+    1. **Trending Topics:**  
+        - [ ] System identifies and displays trending hashtags or topics based on volume and velocity of mentions.
+        - [ ] Trending topics can be sorted based on location or globally.
+    2. **User Recommendations:**  
+        - [ ] Recommend users to follow based on interests, activity, and mutual followers.

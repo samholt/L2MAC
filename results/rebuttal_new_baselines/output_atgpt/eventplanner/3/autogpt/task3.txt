@@ -1,0 +1,6 @@
+Task 3: Create a guest list management system
+- Define the system requirements
+- Design the user interface for the system
+- Implement the backend logic for the system
+- Test the system
+- Integrate the system into the application

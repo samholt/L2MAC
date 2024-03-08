@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class='content-section'>
+		<h2 class='content-section-heading'>Your URLs</h2>
+		{% for url in urls %}
+			<div class='media'>
+				<div class='media-body'>
+					<h4 class='media-heading'><a href='{{ url_for('redirect_to_url', short_url=url.short_url) }}'>{{ url.short_url }}</a></h4>
+					<p>{{ url.original_url }}</p>
+					<p>Clicks: {{ url.clicks }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock content %}

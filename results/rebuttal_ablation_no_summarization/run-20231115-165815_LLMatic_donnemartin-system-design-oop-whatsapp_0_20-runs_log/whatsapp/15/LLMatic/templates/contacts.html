@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Contacts</h1>
+		<div class="form-group">
+			<label for="contact-email">Contact Email:</label>
+			<input type="email" id="contact-email" required>
+		</div>
+		<div class="form-group">
+			<button id="add-contact">Add Contact</button>
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat App</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to Chat App</h1>
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" id="email" required>
+		</div>
+		<div class="form-group">
+			<button id="sign-in">Sign In</button>
+			<button id="sign-up">Sign Up</button>
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

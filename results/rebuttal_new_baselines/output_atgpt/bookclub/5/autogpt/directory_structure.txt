@@ -1,0 +1,20 @@
+Root
+- BookClub
+-- Creation
+-- Management
+- Meeting
+-- Scheduling
+- Discussion
+-- Forums
+- Book
+-- Selection
+- User
+-- Profiles
+- Recommendation
+-- Engine
+- Admin
+-- Dashboard
+- Notifications
+- Alerts
+- Resource
+-- Library

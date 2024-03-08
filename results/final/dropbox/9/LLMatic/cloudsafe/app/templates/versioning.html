@@ -1,0 +1,18 @@
+<!-- File Versioning Page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CloudSafe - Versioning</title>
+</head>
+<body>
+	<!-- File Versioning Options -->
+	<div>
+		{% for file in files %}
+			<div>
+				<p>{{ file.name }}</p>
+				<a href="/versions/{{ file.id }}">View Versions</a>
+			</div>
+		{% endfor %}
+	</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Groups</title>
+</head>
+<body>
+	<h2>Groups</h2>
+	<form action="/user/group" method="post">
+		<label for="group_name">Group Name:</label><br>
+		<input type="text" id="group_name" name="group_name"><br>
+		<label for="members">Members:</label><br>
+		<input type="text" id="members" name="members"><br>
+		<input type="submit" value="Create">
+	</form>
+	<form action="/user/group/add" method="post">
+		<label for="group_name">Group Name:</label><br>
+		<input type="text" id="group_name" name="group_name"><br>
+		<label for="member_email">Member Email:</label><br>
+		<input type="text" id="member_email" name="member_email"><br>
+		<input type="submit" value="Add">
+	</form>
+	<form action="/user/group/remove" method="post">
+		<label for="group_name">Group Name:</label><br>
+		<input type="text" id="group_name" name="group_name"><br>
+		<label for="member_email">Member Email:</label><br>
+		<input type="text" id="member_email" name="member_email"><br>
+		<input type="submit" value="Remove">
+	</form>
+	<form action="/user/group/admin" method="put">
+		<label for="group_name">Group Name:</label><br>
+		<input type="text" id="group_name" name="group_name"><br>
+		<label for="new_admin_email">New Admin Email:</label><br>
+		<input type="text" id="new_admin_email" name="new_admin_email"><br>
+		<input type="submit" value="Update">
+	</form>
+</body>
+</html>

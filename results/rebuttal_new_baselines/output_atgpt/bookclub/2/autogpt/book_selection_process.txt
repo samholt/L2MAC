@@ -1,0 +1,6 @@
+Book Selection Process functionality will include:
+1. Nominating books for reading
+2. Voting on nominated books
+3. Announcing the selected book
+4. Providing access to the selected book
+5. Tracking reading progress

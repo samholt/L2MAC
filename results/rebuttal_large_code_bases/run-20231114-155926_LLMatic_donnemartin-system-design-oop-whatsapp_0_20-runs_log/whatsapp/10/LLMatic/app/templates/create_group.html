@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Create Group</h1>
+	<form method="POST">
+		{{ form.hidden_tag() }}
+		<div>
+			{{ form.group_name.label }} {{ form.group_name(size=32) }}
+		</div>
+		<div>
+			{{ form.group_picture.label }} {{ form.group_picture() }}
+		</div>
+		<div>
+			{{ form.submit() }}
+		</div>
+	</form>
+{% endblock %}

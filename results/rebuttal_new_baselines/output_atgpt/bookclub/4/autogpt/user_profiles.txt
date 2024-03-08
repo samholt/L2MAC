@@ -1,0 +1,7 @@
+User Name
+User Bio
+Reading Preferences
+Joined Book Clubs
+Past Read Books
+Future Read Books
+Meeting Schedules

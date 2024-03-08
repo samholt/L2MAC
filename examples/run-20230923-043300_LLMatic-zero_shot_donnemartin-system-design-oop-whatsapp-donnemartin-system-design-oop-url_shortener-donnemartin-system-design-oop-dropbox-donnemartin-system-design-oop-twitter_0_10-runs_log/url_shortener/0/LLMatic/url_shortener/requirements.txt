@@ -1,0 +1,4 @@
+flask
+pytest
+sqlite3
+requests

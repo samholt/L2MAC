@@ -1,0 +1,6 @@
+Book Club Creation and Management functionality will include:
+1. Creating a new book club
+2. Joining an existing book club
+3. Managing book club members
+4. Setting book club rules and guidelines
+5. Managing book club meetings and events

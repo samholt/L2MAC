@@ -1,0 +1,18 @@
+MVC Architecture Design:
+
+1. Model: URLData
+- long_url: str
+- short_url: str
+- custom_alias: str
+- click_count: int
+- expiration_date: datetime
+
+2. View: URLShortenerView
+- display_short_url(short_url: str)
+- display_error(error_message: str)
+
+3. Controller: URLShortenerController
+- create_short_url(long_url: str, custom_alias: str)
+- redirect_to_long_url(short_url: str)
+- get_click_stats(short_url: str)
+- delete_expired_urls()

@@ -1,0 +1,5 @@
+problem run
+
+LLMatic twitter infinite loop!
+One where all steps came into one step
+Then one where it tried to use tools incorrectly, i.e. not giving the required arguments!

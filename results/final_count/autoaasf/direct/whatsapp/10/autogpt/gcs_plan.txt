@@ -1,0 +1,12 @@
+1. Design the database schema for user registration, authentication, and profiles.
+2. Implement user registration and authentication functionality.
+3. Create user profile management functionality.
+4. Design and implement contact management functionality.
+5. Implement messaging functionality, including one-on-one and group chats.
+6. Create a status/story feature for users to share updates.
+7. Develop a web application frontend for the GCS.
+8. Implement connectivity and offline mode functionality.
+9. Write tests for each functionality to ensure the code is fully functional and meets the specified requirements.
+10. Follow appropriate language and framework best practices for file naming, folder structure, and packaging the project.
+11. Include all necessary imports, types, and dependencies in the code files.
+12. Automatically run the tests to validate the functionality of the generated code.

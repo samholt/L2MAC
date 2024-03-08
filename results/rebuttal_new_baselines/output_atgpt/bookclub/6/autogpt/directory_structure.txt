@@ -1,0 +1,10 @@
+Virtual_Book_Club_Platform/
+	Book_Club_Creation_and_Management/
+	Meeting_Scheduling/
+	Discussion_Forums/
+	Book_Selection_Process/
+	User_Profiles/
+	Recommendation_Engine/
+	Admin_Dashboard/
+	Notifications_and_Alerts/
+	Resource_Library/

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>{{ user.email }}</h1>
+	<p>Online status: {{ 'Online' if user.is_online else 'Offline' }}</p>
+	<form method="POST">
+		{{ form.hidden_tag() }}
+		<p>Profile Picture: <input type="file" name="profile_picture"></p>
+		<p>Status Message: <input type="text" name="status_message" value="{{ user.status_message }}"></p>
+		<p>Privacy Settings: <select name="privacy_settings">
+			<option value="public" {% if user.privacy_settings == 'public' %}selected{% endif %}>Public</option>
+			<option value="private" {% if user.privacy_settings == 'private' %}selected{% endif %}>Private</option>
+		</select></p>
+		<p><input type="submit" value="Update Profile"></p>
+	</form>
+{% endblock %}
+

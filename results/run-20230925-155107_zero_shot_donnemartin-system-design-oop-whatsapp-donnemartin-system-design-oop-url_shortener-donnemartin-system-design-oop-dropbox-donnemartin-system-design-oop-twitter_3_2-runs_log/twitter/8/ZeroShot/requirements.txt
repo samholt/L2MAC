@@ -1,0 +1,7 @@
+flask
+flask_jwt_extended
+flask_sqlalchemy
+flask_marshmallow
+marshmallow_sqlalchemy
+pytest
+pytest_flask

@@ -1,0 +1,41 @@
+**Global Chat Service (GCS)**
+
+**Overview**:  
+A real-time online chat application allowing users to send text messages, images, and create group chats.
+
+**Functional Requirements**:
+
+1. **User Registration and Authentication**:
+    - Sign up using email.
+    - Forgotten password recovery.
+
+2. **User Profile**:
+    - Allow users to set profile pictures and status messages.
+    - Privacy settings for who can see user details or last seen status.
+
+3. **Contact Management**:
+    - Block/unblock contacts.
+    - Create, edit, and manage groups.
+
+4. **Messaging**:
+    - Send and receive real-time text messages.
+    - Message read receipts (blue ticks or equivalent).
+    - End-to-end encryption for security.
+    - Image sharing.
+    - Emojis, GIFs, and stickers support.
+
+5. **Group Chats**:
+    - Create group chats with a name and picture.
+    - Add or remove participants.
+    - Admin roles and permissions.
+
+6. **Status/Story Feature**:
+    - Allow users to post image statuses visible for a limited time.
+    - Control who can see the status.
+
+7. **Web Application**:
+    - Web-based version accessible from browsers.
+
+8. **Connectivity and Offline Mode**:
+    - Message queuing for when the user is offline; messages are sent once connectivity is restored.
+    - Display online/offline status.

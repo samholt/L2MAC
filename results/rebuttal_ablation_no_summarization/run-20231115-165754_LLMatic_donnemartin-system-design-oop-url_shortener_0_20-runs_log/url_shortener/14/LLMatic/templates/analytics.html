@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>URL Shortener - Analytics</title>
+</head>
+<body>
+	<h1>Analytics for {{ short_url }}</h1>
+	<table>
+		<tr>
+			<th>Date/Time</th>
+			<th>IP Address</th>
+		</tr>
+		{% for click in clicks %}
+		<tr>
+			<td>{{ click.date_time }}</td>
+			<td>{{ click.ip }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

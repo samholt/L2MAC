@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Messaging</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+	<div class="container">
+		<h1>Messaging</h1>
+		<div class="form-group">
+			<label for="recipient-email">Recipient Email:</label>
+			<input type="email" id="recipient-email" required>
+		</div>
+		<div class="form-group">
+			<label for="message">Message:</label>
+			<textarea id="message" required></textarea>
+		</div>
+		<div class="form-group">
+			<button id="send-message">Send Message</button>
+		</div>
+	</div>
+	<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

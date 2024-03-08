@@ -1,0 +1,10 @@
+1. URLShortener
+  - shorten_url(original_url: str) -> str
+  - get_original_url(shortened_url: str) -> str
+2. Database
+  - store_url_mapping(original_url: str, shortened_url: str)
+  - get_original_url(shortened_url: str) -> str
+  - get_shortened_url(original_url: str) -> str
+3. API
+  - POST /shorten
+  - GET /{shortened_url}

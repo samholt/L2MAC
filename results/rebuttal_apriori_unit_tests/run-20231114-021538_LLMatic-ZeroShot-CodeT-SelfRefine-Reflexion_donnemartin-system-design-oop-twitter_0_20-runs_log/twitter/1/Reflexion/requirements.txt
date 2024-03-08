@@ -1,0 +1,4 @@
+flask
+flask_jwt_extended
+dataclasses
+pytest

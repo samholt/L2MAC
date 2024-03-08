@@ -1,0 +1,6 @@
+flask
+pytest
+flask_sqlalchemy
+flask_jwt_extended
+werkzeug
+pytest-flask

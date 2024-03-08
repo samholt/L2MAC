@@ -1,0 +1,1 @@
+Admin Dashboard functionality will allow administrators to manage the platform effectively. It will include features like user management, book club management, platform settings, etc.

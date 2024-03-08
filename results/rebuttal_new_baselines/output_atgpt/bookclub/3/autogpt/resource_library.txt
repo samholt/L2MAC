@@ -1,0 +1,1 @@
+Resource Library functionality will provide users with additional resources related to the books they are reading. It will include features like searching for resources, adding new resources, rating and reviewing resources, etc.

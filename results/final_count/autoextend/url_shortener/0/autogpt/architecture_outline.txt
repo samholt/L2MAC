@@ -1,0 +1,10 @@
+1. Frontend
+  - User interface for submitting URLs
+  - Display shortened URLs
+2. Backend
+  - API for receiving and processing URL requests
+  - URL shortening logic
+  - Database for storing original and shortened URLs
+3. Tests
+  - Unit tests for core functionality
+  - Integration tests for API and database interactions

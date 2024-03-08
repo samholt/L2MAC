@@ -1,0 +1,50 @@
+**1. Service Name:** "CloudSafe"
+
+**2. Objective:** To provide users with a secure, reliable, and easily accessible platform to store, share, and manage their digital files.
+
+### Functional Requirements:
+**1. User Account Management:**
+   - **1.1** User Registration:
+     - Name, Email, Password.
+   - **1.2** User Login:
+     - Email and password authentication.
+     - Forgot password functionality.
+   - **1.3** User Profile:
+     - Profile picture, name, email, change password, storage used/remaining.
+
+**2. File Management:**
+   - **2.1** File Upload:
+     - Drag and drop support.
+     - File size and type restrictions.
+   - **2.2** File Download:
+     - Direct download link.
+     - Download folder as ZIP.
+   - **2.3** File/Folder Organization:
+     - Create folders.
+     - Rename, move, and delete files/folders.
+   - **2.4** File Versioning:
+     - Maintain historical versions of files.
+     - Option to restore to previous versions.
+
+**3. File Sharing:**
+   - **3.1** Shareable Links:
+     - Generate shareable URL links for files/folders.
+     - Expiry date and password protection options.
+   - **3.2** Shared Folders:
+     - Invite users via email.
+     - Set permissions (view, edit, delete).
+
+**4. Security:**
+   - **4.1** Encryption:
+     - Files are encrypted at rest and in transit.
+   - **4.3** Activity Log:
+     - Track user actions like uploads, downloads, shares, etc.
+
+**5. UI/UX:**
+   - **5.1** Responsive Design:
+     - Web, mobile, and tablet views.
+   - **5.2** Themes:
+     - Light and dark modes.
+   - **5.3** File Preview:
+     - Thumbnails for images, videos.
+     - Document viewers for common file types.

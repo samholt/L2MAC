@@ -1,0 +1,33 @@
+# jax
+# hydra
+wandb
+gym==0.23.1
+pygame
+openml
+timeout_decorator
+openai==0.27.8
+tiktoken
+pycryptodome
+Flask-Migrate
+scipy
+pandas
+tqdm
+flask
+flask_sqlalchemy
+flask_migrate
+flask_login
+flask_wtf
+flask_bcrypt
+flask_mail
+flask_admin
+flask_bootstrap
+flask_moment
+flask_uploads
+flask_dropzone
+flask_simplemde
+flask_script
+tiktoken
+scikit-learn
+pygount
+radon
+matplotlib

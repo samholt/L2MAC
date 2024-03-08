@@ -1,0 +1,16 @@
+<!-- Profile Page -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CloudSafe - Profile</title>
+</head>
+<body>
+	<!-- User Profile Information -->
+	<div>
+		<img src="{{ user.profile_picture }}" alt="Profile Picture">
+		<h1>{{ user.name }}</h1>
+		<p>{{ user.email }}</p>
+		<p>Storage Used: {{ user.storage_used }}</p>
+	</div>
+</body>
+</html>

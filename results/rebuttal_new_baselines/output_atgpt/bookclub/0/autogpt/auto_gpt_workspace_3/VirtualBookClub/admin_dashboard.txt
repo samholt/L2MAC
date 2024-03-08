@@ -1,0 +1,1 @@
+This file represents the 'Admin Dashboard' functionality. Details and data related to this functionality will be stored here.

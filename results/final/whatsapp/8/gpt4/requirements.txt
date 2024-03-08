@@ -1,0 +1,13 @@
+flask
+flask_socketio
+flask_sqlalchemy
+flask_login
+flask_wtf
+flask_bcrypt
+flask_mail
+email_validator
+pillow
+emoji
+python_dotenv
+pytest
+pytest-flask

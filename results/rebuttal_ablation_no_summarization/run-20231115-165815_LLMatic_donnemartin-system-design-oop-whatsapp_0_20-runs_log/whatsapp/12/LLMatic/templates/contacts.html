@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts</title>
+</head>
+<body>
+	<h2>Contacts</h2>
+	<form action="/user/block" method="post">
+		<label for="contact_email">Block Contact:</label><br>
+		<input type="text" id="contact_email" name="contact_email"><br>
+		<input type="submit" value="Block">
+	</form>
+	<form action="/user/unblock" method="post">
+		<label for="contact_email">Unblock Contact:</label><br>
+		<input type="text" id="contact_email" name="contact_email"><br>
+		<input type="submit" value="Unblock">
+	</form>
+</body>
+</html>

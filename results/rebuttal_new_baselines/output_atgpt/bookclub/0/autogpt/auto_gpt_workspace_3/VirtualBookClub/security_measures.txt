@@ -1,0 +1,1 @@
+This file represents the 'Security Measures' functionality. Details and data related to this functionality will be stored here.

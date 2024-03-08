@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class='content-section'>
+		<h2 class='account-heading'>Analytics for {{ url.short_url }}</h2>
+		<p>Original URL: {{ url.original_url }}</p>
+		<p>Total Clicks: {{ url.clicks }}</p>
+		{% for click in clicks %}
+			<div class='media'>
+				<div class='media-body'>
+					<h5 class='mt-0'>Click at {{ click.timestamp }}</h5>
+					<p>Location: {{ click.location }}</p>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock content %}

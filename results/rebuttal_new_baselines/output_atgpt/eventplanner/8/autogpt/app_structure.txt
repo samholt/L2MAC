@@ -1,0 +1,10 @@
+1. User Account Management
+2. Event Creation and Management
+3. Venue Sourcing
+4. Guest List Management
+5. Vendor Coordination
+6. Budget Management
+7. Notifications and Reminders
+8. Reporting and Analytics
+9. Admin Dashboard
+10. Security and Data Privacy

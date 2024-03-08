@@ -1,0 +1,3 @@
+function sendInvestmentAlerts(investment) {
+  // Investment alert logic goes here
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Profile</title>
+</head>
+<body>
+	<h1>Edit Profile</h1>
+	<form method="POST">
+		{{ form.hidden_tag() }}
+		<p>Profile Picture: {{ form.profile_picture }}</p>
+		<p>Bio: {{ form.bio }}</p>
+		<p>Website Link: {{ form.website_link }}</p>
+		<p>Location: {{ form.location }}</p>
+		<p>Private Profile: {{ form.is_private }}</p>
+		<p>{{ form.submit() }}</p>
+	</form>
+</body>
+</html>

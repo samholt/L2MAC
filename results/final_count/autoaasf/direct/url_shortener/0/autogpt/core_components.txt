@@ -1,0 +1,20 @@
+Core Components:
+
+1. URLShortener class:
+   - __init__(self)
+   - generate_short_url(self, original_url: str) -> str
+   - get_original_url(self, short_url: str) -> str
+   - store_url_mapping(self, original_url: str, short_url: str)
+   - generate_unique_key(self) -> str
+
+2. main.py:
+   - main()
+
+3. test_url_shortener.py:
+   - test_generate_short_url()
+   - test_get_original_url()
+   - test_store_url_mapping()
+   - test_generate_unique_key()
+
+4. requirements.txt:
+   - List of required packages and their versions

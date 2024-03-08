@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Profile</title>
+</head>
+<body>
+	<h1>User Profile</h1>
+	<form method="post">
+		<label for="profile_picture">Profile Picture:</label><br>
+		<input type="file" id="profile_picture" name="profile_picture"><br>
+		<label for="status_message">Status Message:</label><br>
+		<input type="text" id="status_message" name="status_message"><br>
+		<label for="privacy_settings">Privacy Settings:</label><br>
+		<select id="privacy_settings" name="privacy_settings">
+			<option value="public">Public</option>
+			<option value="private">Private</option>
+			<option value="friends_only">Friends Only</option>
+		</select><br>
+		<input type="submit" value="Save">
+	</form>
+</body>
+</html>

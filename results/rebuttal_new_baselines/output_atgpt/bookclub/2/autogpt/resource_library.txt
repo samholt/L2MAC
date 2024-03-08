@@ -1,0 +1,6 @@
+Resource Library functionality will include:
+1. Providing access to a wide range of books
+2. Allowing users to search for books by title, author, or genre
+3. Providing book summaries and reviews
+4. Allowing users to download or purchase books
+5. Providing resources for book discussions, such as discussion guides and author interviews

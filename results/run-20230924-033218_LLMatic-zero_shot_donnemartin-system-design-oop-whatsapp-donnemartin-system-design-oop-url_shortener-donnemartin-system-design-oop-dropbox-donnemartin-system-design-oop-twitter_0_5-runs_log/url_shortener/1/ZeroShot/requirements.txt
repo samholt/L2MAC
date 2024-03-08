@@ -1,0 +1,6 @@
+flask
+pytest
+dataclasses
+requests
+geopy
+

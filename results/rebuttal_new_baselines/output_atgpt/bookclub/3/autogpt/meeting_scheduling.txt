@@ -1,0 +1,1 @@
+Meeting Scheduling functionality will allow users to schedule meetings for their book clubs. It will include features like scheduling a meeting, setting a reminder, cancelling a meeting, etc.

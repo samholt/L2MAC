@@ -1,0 +1,7 @@
+flask
+flask-socketio
+flask-sqlalchemy
+flask-login
+flask-wtf
+flask-migrate
+pillow

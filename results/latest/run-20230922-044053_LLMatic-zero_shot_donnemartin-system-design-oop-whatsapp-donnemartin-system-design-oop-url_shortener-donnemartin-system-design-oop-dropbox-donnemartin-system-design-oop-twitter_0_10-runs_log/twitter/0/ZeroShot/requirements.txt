@@ -1,0 +1,9 @@
+flask
+flask_sqlalchemy
+flask_jwt_extended
+flask_bcrypt
+flask_marshmallow
+marshmallow-sqlalchemy
+flask_cors
+pytest
+pytest-flask

@@ -1,0 +1,3 @@
+MainProcess| 2023-09-28 16:31:01,214,214 multiprocessing INFO [Exp evaluation complete] {'method': 'autogpt', 'seed': 864, 'features': 17, 'total_features': 24, 'features_percent': 70.83333333333334, 'test_passed': 0, 'test_total': 0, 'locs': 850, 'errors': 3, 'path': './results/final_count/asd/dropbox/1/autogpt', 'env_name': 'dropbox'}
+MainProcess| 2023-09-28 16:31:09,278,278 multiprocessing INFO [Exp evaluation complete] {'method': 'autogpt', 'seed': 394, 'features': 0, 'total_features': 24, 'features_percent': 0.0, 'test_passed': 0, 'test_total': 0, 'locs': 57, 'errors': 0, 'path': './results/final_count/asd/dropbox/0/autogpt', 'env_name': 'dropbox'}
+MainProcess| 2023-09-28 16:31:09,918,918 multiprocessing INFO process shutting down

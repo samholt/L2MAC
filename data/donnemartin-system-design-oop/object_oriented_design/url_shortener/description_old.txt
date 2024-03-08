@@ -1,0 +1,35 @@
+### **Online URL Shortening Service**
+
+**Overview**:
+A service that allows users to submit long URLs and then receive a shortened version of that URL for ease of sharing.
+
+**Functional Requirements**:
+
+1. **URL Shortening**:
+   - Users can input a URL to be shortened.
+   - The system should validate that the URL is active and legitimate.
+   - The system should generate a unique shortened URL.
+   - Users can choose custom short links (subject to availability).
+
+2. **Redirection**:
+   - When users or their audience access the shortened URL, they should be redirected to the original URL.
+
+3. **Analytics**:
+   - Users can view statistics about their shortened URLs, including:
+     - Number of clicks.
+     - Date/time of each click.
+     - Geographical location of the clicker.
+
+4. **User Accounts**:
+   - Users can create accounts to manage their URLs.
+   - Account holders can view all their shortened URLs.
+   - Account holders can edit or delete their shortened URLs.
+   - Account holders can view analytics for all their shortened URLs.
+
+5. **Admin Dashboard**:
+   - Administrators can view all shortened URLs.
+   - Administrators can delete any URL or user account.
+   - Administrators can monitor system performance and analytics.
+
+6. **Expiration**:
+   - Allow users to set an expiration date/time for the shortened URL after which it becomes inactive.

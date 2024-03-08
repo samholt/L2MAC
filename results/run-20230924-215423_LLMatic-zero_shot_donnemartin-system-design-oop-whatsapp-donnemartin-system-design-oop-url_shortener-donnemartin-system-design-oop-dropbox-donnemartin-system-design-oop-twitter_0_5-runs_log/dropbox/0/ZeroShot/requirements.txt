@@ -1,0 +1,7 @@
+flask
+pytest
+dataclasses
+flask-login
+flask-wtf
+werkzeug
+

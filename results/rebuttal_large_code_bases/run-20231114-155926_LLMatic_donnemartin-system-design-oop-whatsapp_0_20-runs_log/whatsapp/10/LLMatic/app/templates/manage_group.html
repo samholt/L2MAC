@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+	<h1>Manage Group</h1>
+	<ul>
+		{% for member in group.members %}
+			<li>{{ member.username }}</li>
+		{% endfor %}
+	</ul>
+	<form method="POST">
+		<input type="text" name="username" placeholder="Username">
+		<input type="submit" value="Add/Remove Member">
+	</form>
+{% endblock %}
