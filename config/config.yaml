@@ -18,12 +18,13 @@ relentless:
   lam: 10
 setup:
   use_azure_api: true
-  debug_mode: true
+  debug_mode: false
   flush_mode: false
   multi_process_results: false
   multi_process_cores: 4
   experiment: 'MAIN_TABLE'
   methods_to_evaluate: ['LLMatic', 'ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion', 'ZeroShot']
+  # methods_to_evaluate: ['ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion', 'ZeroShot']
   envs_to_evaluate: ['donnemartin-system-design-oop-url_shortener', 'donnemartin-system-design-oop-twitter','donnemartin-system-design-oop-whatsapp'] # Core paper environments
   # envs_to_evaluate: ['donnemartin-system-design-oop-recipe', 'donnemartin-system-design-oop-eventplanner', 'donnemartin-system-design-oop-finance'] # Appendix paper environments
   wandb:
