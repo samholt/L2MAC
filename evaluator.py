@@ -40,7 +40,6 @@ import yaml
 import json
 import openai
 from functools import partial
-from openai.embeddings_utils import cosine_similarity
 
 from pathlib import Path
 from rich.console import Console
@@ -69,12 +68,16 @@ from tempfile import TemporaryDirectory
 from pathlib import Path
 import tempfile
 from hydra.core.global_hydra import GlobalHydra
+from timeout_decorator import timeout
 
 PROCESS_FEATURES = True
 CC_COMPLEXITY = False
-MULTI_PROCESS = True
-MODEL_IDS = ['gpt-4-0', 'gpt-4-1', 'gpt-4-2', 'gpt-4-3']
+# MULTI_PROCESS = True
+MULTI_PROCESS = False
+# MODEL_IDS = ['gpt-4-0', 'gpt-4-1', 'gpt-4-2', 'gpt-4-3']
+MODEL_IDS = ['gpt-4']
 
+@timeout(60, timeout_exception=StopIteration)
 def check_pytest_return_full_count(file_dict: dict):
     with tempfile.TemporaryDirectory() as tmpdirname:
         write_files_from_dict(file_dict, tmpdirname)
@@ -550,7 +553,8 @@ def process_files():
     # PATH = "./results/rebuttal_new_baselines_llmatic_missing/"
     # PATH = "./results/rebuttal_new_baselines/output_atgpt/"
     # PATH = "./results/rebuttal_large_code_bases/"
-    PATH = "./results/rebuttal_ablation_no_summarization/"
+    # PATH = "./results/rebuttal_ablation_no_summarization/"
+    PATH = "./repo_results/"
 
     # python3 -m pylint --disable=all --enable=E --score=no CodeGenGPT CodeGenGPT/*.py main.py analytics.py url_shortener.py
 
@@ -562,8 +566,14 @@ def process_files():
         m = p.split('/')[-1]
         if m.lower() in ['llmatic', 'autogpt', 'zeroshot', 'selfrefine', 'reflexion', 'codet']:
             dataset = p.split('/')[-3]
-            datasets.append(f'{dataset}-{m}')
-            paths.append(p)
+            seed_i = int(p.split('/')[-2])
+            if dataset == 'url_shortener' and seed_i == 19 and m.lower() == 'llmatic':
+                datasets.append(f'{dataset}-{m}')
+                paths.append(p)
+            # if dataset == 'twitter' or (dataset == 'whatsapp' and seed_i == 0) or (dataset == 'whatsapp' and seed_i == 8) or (dataset == 'whatsapp' and seed_i == 13):
+            #     datasets.append(f'{dataset}-{m}')
+            #     paths.append(p)
+            # if (dataset == 'whatsapp' and seed_i == 0 and m.lower() == 'zeroshot'):
     
     from collections import Counter
     cc = Counter(datasets)

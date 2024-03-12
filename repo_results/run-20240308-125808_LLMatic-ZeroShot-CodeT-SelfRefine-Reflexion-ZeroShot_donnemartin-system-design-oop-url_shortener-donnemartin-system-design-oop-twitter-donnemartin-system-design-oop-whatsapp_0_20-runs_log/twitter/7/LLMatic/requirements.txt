@@ -1,0 +1,4 @@
+Flask==1.1.2
+pytest==6.2.2
+Werkzeug==1.0.1
+PyJWT==1.7.1

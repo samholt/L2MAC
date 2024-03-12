@@ -15,11 +15,13 @@ class Experiment(Enum):
     REBUTTAL_HUMAN_EVAL = 6
     ABLATION_NO_SUMMARIZATION = 7
 
-experiment = Experiment.ABLATION_NO_SUMMARIZATION
+experiment = Experiment.MAIN_TABLE
 
 if experiment == Experiment.MAIN_TABLE:
     # Main results table - before rebuttal
-    LOG_PATH = './results/final_final_results/combined.txt'
+    # LOG_PATH = './results/final_final_results/combined.txt'
+    # LOG_PATH = './repo_results/run-20240308-125808_LLMatic-ZeroShot-CodeT-SelfRefine-Reflexion-ZeroShot_donnemartin-system-design-oop-url_shortener-donnemartin-system-design-oop-twitter-donnemartin-system-design-oop-whatsapp_0_20-runs_log/evaluator-20240312-021452_LLMatic-ZeroShot-CodeT-SelfRefine-Reflexion-ZeroShot_donnemartin-system-design-oop-url_shortener-donnemartin-system-design-oop-twitter-donnemartin-system-design-oop-whatsapp_0_20-runs_log.txt'
+    LOG_PATH = './repo_results/run-20240308-125808_LLMatic-ZeroShot-CodeT-SelfRefine-Reflexion-ZeroShot_donnemartin-system-design-oop-url_shortener-donnemartin-system-design-oop-twitter-donnemartin-system-design-oop-whatsapp_0_20-runs_log/evaluator-20240312-124410_LLMatic-ZeroShot-CodeT-SelfRefine-Reflexion-ZeroShot_donnemartin-system-design-oop-url_shortener-donnemartin-system-design-oop-twitter-donnemartin-system-design-oop-whatsapp_0_20-runs_log.txt'
     # New rebuttal results table on additional environments
     # LOG_PATH = './results/rebuttal/evaluator-20231112-224059_CodeT-SelfRefine-Reflexion-ZeroShot_donnemartin-system-design-oop-finance-donnemartin-system-design-oop-bookclub_0_20-runs_log.txt'
     df = load_df(LOG_PATH)

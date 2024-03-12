@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+Flask-WTF
+Flask-JWT-Extended
+passlib
+pytest
+bs4

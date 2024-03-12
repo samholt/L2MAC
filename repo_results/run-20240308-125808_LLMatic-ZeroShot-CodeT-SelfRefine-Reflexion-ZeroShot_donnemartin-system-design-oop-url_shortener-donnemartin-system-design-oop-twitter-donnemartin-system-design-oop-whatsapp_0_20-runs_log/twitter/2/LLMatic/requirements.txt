@@ -1,0 +1,4 @@
+Flask==1.1.2
+pytest==6.2.4
+Flask-JWT-Extended==4.3.0
+

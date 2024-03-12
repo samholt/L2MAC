@@ -424,7 +424,20 @@ def generate_main_results_table_paper_format_tests_pass_code_coverage(df_results
     return df_out, table
 
 def generate_main_results_table_paper_format_tests_pass(df_results, wandb=None, use_95_ci=True, seeds_to_use=None, include_tests=True, rebuttal=False, rebuttal_big=False, ablation_no_summarization=False):
-    # Process seeds here
+    # # Process seeds here
+    # uem = {}
+    # for p in df_results['path'].unique():
+    #     if type(p) != str:
+    #         continue
+    #     env, seed, method = p.split('/')[-3:]
+    #     em = f'{env}-{method}'
+    #     if em not in uem:
+    #         uem[em] = []
+    #     uem[em].append(seed)
+    # a = list(uem.values())[-1]
+    # a = [int(x) for x in a]
+    # a = sorted(a)
+
     df_results = remove_unneeded_columns(df_results)
     df_results = df_results[df_results['locs'] != 0]
     df_results['features'] = np.minimum(df_results['features'], df_results['total_features'])
@@ -1787,6 +1800,5 @@ def seed_all(seed=None):
         seed = round(time() * 1000) % int(1e9)
 
     # Set the seeds using the shifted seed
-    torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)

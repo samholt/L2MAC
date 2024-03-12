@@ -1,0 +1,5 @@
+<h1>Status</h1>
+{% for status in user.statuses %}
+	<img src='{{ status.image }}' alt='Status Image'>
+	<p>Posted at: {{ status.posted_at }}</p>
+{% endfor %}
