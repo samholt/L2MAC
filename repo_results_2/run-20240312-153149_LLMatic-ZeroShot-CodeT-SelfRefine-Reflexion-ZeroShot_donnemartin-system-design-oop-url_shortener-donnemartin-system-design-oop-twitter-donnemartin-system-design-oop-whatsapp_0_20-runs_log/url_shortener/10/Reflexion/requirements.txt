@@ -1,0 +1,4 @@
+flask
+pytest
+dataclasses
+geopy

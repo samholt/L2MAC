@@ -554,7 +554,9 @@ def process_files():
     # PATH = "./results/rebuttal_new_baselines/output_atgpt/"
     # PATH = "./results/rebuttal_large_code_bases/"
     # PATH = "./results/rebuttal_ablation_no_summarization/"
-    PATH = "./repo_results/"
+    # PATH = "./repo_results/"
+    # PATH = "./repo_results_2/"
+    PATH = "./repo_results_2/autogpt/"
 
     # python3 -m pylint --disable=all --enable=E --score=no CodeGenGPT CodeGenGPT/*.py main.py analytics.py url_shortener.py
 
@@ -567,9 +569,9 @@ def process_files():
         if m.lower() in ['llmatic', 'autogpt', 'zeroshot', 'selfrefine', 'reflexion', 'codet']:
             dataset = p.split('/')[-3]
             seed_i = int(p.split('/')[-2])
-            if dataset == 'url_shortener' and seed_i == 19 and m.lower() == 'llmatic':
-                datasets.append(f'{dataset}-{m}')
-                paths.append(p)
+            # if dataset == 'url_shortener' and seed_i == 19 and m.lower() == 'llmatic':
+            datasets.append(f'{dataset}-{m}')
+            paths.append(p)
             # if dataset == 'twitter' or (dataset == 'whatsapp' and seed_i == 0) or (dataset == 'whatsapp' and seed_i == 8) or (dataset == 'whatsapp' and seed_i == 13):
             #     datasets.append(f'{dataset}-{m}')
             #     paths.append(p)

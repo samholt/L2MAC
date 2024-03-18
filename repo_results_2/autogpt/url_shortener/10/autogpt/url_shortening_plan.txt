@@ -1,0 +1,5 @@
+1. Receive a URL from the user.
+2. Validate the URL.
+3. Generate a unique shortened URL.
+4. Store the original URL and its shortened version in the 'urls.json' file.
+5. Return the shortened URL to the user.

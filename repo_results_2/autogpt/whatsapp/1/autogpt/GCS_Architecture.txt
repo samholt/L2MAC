@@ -1,0 +1,17 @@
+Global Chat Service (GCS) Architecture:
+
+1. User Registration and Authentication Module: This module will handle user sign up using email and password recovery.
+
+2. User Profile Module: This module will allow users to set profile pictures, status messages, and configure privacy settings.
+
+3. Contact Management Module: This module will enable users to block/unblock contacts and manage groups.
+
+4. Messaging Module: This module will handle real-time text messaging, read receipts, end-to-end encryption, and media sharing.
+
+5. Group Chat Module: This module will allow users to create group chats, manage participants, and define admin roles.
+
+6. Status/Story Feature Module: This module will enable users to post image statuses visible for a limited time.
+
+7. Web Application: This will be a browser-accessible version of the GCS.
+
+8. Connectivity and Offline Mode: This feature will handle message queuing for offline users and display online/offline status.

@@ -1,0 +1,5 @@
+Connectivity and Offline Mode Design:
+1. Message Queuing:
+   - Implement message queuing for offline users
+2. Online/Offline Status:
+   - Display online/offline status

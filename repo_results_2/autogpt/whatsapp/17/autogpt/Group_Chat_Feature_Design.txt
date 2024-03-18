@@ -1,0 +1,7 @@
+Group Chat Feature Design:
+1. Group Creation:
+   - Users can create group chats with a name and picture
+2. Participant Management:
+   - Users can add or remove participants
+3. Admin Roles and Permissions:
+   - Users can assign admin roles and permissions

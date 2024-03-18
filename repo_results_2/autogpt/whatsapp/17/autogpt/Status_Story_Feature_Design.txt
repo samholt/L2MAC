@@ -1,0 +1,5 @@
+Status/Story Feature Design:
+1. Status Posting:
+   - Users can post image statuses visible for a limited time
+2. Status Visibility Control:
+   - Users can control who can see the status

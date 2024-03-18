@@ -1,0 +1,9 @@
+Global Chat Service (GCS) Project Plan:
+1. Design and implement a user registration and authentication system
+2. Develop a user profile module
+3. Create a contact management module
+4. Implement a messaging module
+5. Design and develop a group chat module
+6. Implement a status/story feature module
+7. Develop a web application version of the GCS
+8. Implement connectivity and offline mode features

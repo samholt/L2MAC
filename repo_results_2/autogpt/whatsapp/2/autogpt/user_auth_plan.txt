@@ -1,0 +1,12 @@
+1. User Registration:
+- Users should be able to sign up using their email address.
+- The system should verify the email address before creating the account.
+- Passwords should be hashed before being stored in the database.
+
+2. User Authentication:
+- Users should be able to log in using their email address and password.
+- The system should compare the hashed version of the entered password with the one stored in the database.
+
+3. Password Recovery:
+- Users should be able to recover their password if they forget it.
+- The system should send a password reset link to the user's email address.

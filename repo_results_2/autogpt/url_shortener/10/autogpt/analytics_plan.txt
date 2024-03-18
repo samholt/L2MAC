@@ -1,0 +1,5 @@
+1. Track each click on a shortened URL or custom short link.
+2. Record the date/time of each click.
+3. Record the geographical location of the clicker.
+4. Store this data in the 'urls.json' file.
+5. Provide a way for users to view this data for their shortened URLs.

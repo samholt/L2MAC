@@ -1,0 +1,9 @@
+Global Chat Service (GCS) Connectivity and Offline Mode Data Structures:
+
+1. User ID: The ID of the user. This can be stored as a string.
+
+2. Online Status: Whether the user is online or offline. This can be stored as a boolean.
+
+3. Last Seen: The last time the user was online. This can be stored as a datetime object.
+
+4. Message Queue: A queue of messages that the user has sent while offline. This can be stored as a list of message IDs.

@@ -1,0 +1,4 @@
+Contact Management System Design:
+1. Contact Management:
+   - Users can block/unblock contacts
+   - Users can create, edit, and manage groups

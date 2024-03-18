@@ -1,0 +1,7 @@
+1. Posting Image Statuses:
+- Users should be able to post image statuses that are visible for a limited time.
+- The system should automatically delete statuses after they have been visible for the specified time.
+
+2. Controlling Visibility:
+- Users should be able to control who can see their statuses.
+- The system should respect the user's visibility settings when displaying statuses to other users.

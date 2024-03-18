@@ -1,0 +1,7 @@
+1. Creating Group Chats:
+- Users should be able to create group chats with names and pictures.
+- The system should allow users to add and remove participants, and define admin roles and permissions.
+
+2. Managing Group Chats:
+- Users should be able to edit the name and picture of the group chat, and manage the participants and admin roles.
+- The system should respect the admin roles and permissions when allowing users to make changes to the group chat.

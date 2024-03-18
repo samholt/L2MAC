@@ -1,0 +1,13 @@
+User Profile Module Design:
+
+1. Profile Picture:
+- Users should be able to upload a profile picture.
+- The system should store the profile picture securely.
+
+2. Status Messages:
+- Users should be able to set a status message.
+- The system should display the status message on the user's profile.
+
+3. Privacy Settings:
+- Users should be able to configure privacy settings for their details and last seen status.
+- The system should respect the user's privacy settings when displaying their details and last seen status to other users.

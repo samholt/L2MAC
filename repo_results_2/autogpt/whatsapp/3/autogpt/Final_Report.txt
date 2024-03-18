@@ -1,0 +1,11 @@
+The Global Chat Service (GCS) has been successfully designed and implemented with the following features:
+
+- User registration and authentication
+- User profiles
+- Contact management
+- Messaging
+- Group chats
+- Status/story feature
+- Connectivity and offline mode
+
+The implementation for the web application version of the GCS is missing and should be added in future improvements.

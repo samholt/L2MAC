@@ -1,0 +1,9 @@
+Status/Story Feature Module Design:
+1. Status Posting:
+   - Allow users to post image statuses
+   - Validate the status details
+   - Store the status details
+2. Status Visibility:
+   - Allow users to control who can see their statuses
+   - Validate the visibility settings
+   - Store the visibility settings

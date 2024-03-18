@@ -1,0 +1,10 @@
+1. Sending and Receiving Messages:
+- Users should be able to send and receive real-time text messages.
+- The system should support end-to-end encryption to ensure the privacy of the messages.
+
+2. Read Receipts:
+- The system should support message read receipts, showing when a message has been read by the recipient.
+
+3. Image Sharing, Emojis, GIFs, and Stickers:
+- Users should be able to share images, emojis, GIFs, and stickers in their messages.
+- The system should support these types of content in a secure and efficient manner.

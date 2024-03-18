@@ -1,0 +1,7 @@
+1. Blocking/Unblocking Contacts:
+- Users should be able to block and unblock other users.
+- The system should prevent blocked users from contacting the user who blocked them.
+
+2. Managing Groups:
+- Users should be able to create, edit, and manage groups.
+- The system should allow users to add and remove participants, and define admin roles and permissions.

@@ -1,0 +1,13 @@
+Global Chat Service (GCS) Group Chat Data Structures:
+
+1. Group ID: A unique identifier for each group. This can be stored as a string.
+
+2. Group Name: The name of the group. This can be stored as a string.
+
+3. Group Picture: A link to the group's picture. This can be stored as a string.
+
+4. Admins: A list of the group's admins. This can be stored as a list of user IDs.
+
+5. Members: A list of the group's members. This can be stored as a list of user IDs.
+
+6. Messages: A list of the group's messages. Each message can include the message ID, sender ID, content, timestamp, and any media.

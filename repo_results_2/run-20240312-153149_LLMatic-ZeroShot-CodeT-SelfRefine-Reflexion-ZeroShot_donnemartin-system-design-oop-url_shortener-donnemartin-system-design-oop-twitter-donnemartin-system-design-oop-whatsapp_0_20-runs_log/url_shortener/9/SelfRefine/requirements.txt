@@ -1,0 +1,5 @@
+flask
+pytest
+dataclasses
+requests
+

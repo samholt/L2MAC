@@ -1,0 +1,7 @@
+Global Chat Service (GCS) User Profile Data Structures:
+
+1. Profile Picture: A link to the user's profile picture. This can be stored as a string.
+
+2. Status Message: The user's status message. This can be stored as a string.
+
+3. Privacy Settings: The user's privacy settings. This can be stored as a dictionary with keys for different settings (e.g., 'last seen', 'profile picture', 'status message') and values indicating who can see these (e.g., 'everyone', 'contacts', 'nobody').

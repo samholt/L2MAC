@@ -1,0 +1,7 @@
+Global Chat Service (GCS) Contact and Group Data Structures:
+
+1. Contact List: A list of the user's contacts. This can be stored as a list of user IDs.
+
+2. Blocked Contacts: A list of the user's blocked contacts. This can also be stored as a list of user IDs.
+
+3. Groups: A dictionary with group IDs as keys and group information as values. Each group's information can include a list of member user IDs, a list of admin user IDs, the group name, and a link to the group picture.

@@ -1,0 +1,15 @@
+Global Chat Service (GCS) Message Data Structures:
+
+1. Message ID: A unique identifier for each message. This can be stored as a string.
+
+2. Sender ID: The ID of the user who sent the message. This can be stored as a string.
+
+3. Recipient ID: The ID of the user or group who received the message. This can be stored as a string.
+
+4. Message Content: The content of the message. This can be stored as a string.
+
+5. Timestamp: The time when the message was sent. This can be stored as a datetime object.
+
+6. Read Receipt: Whether the message has been read by the recipient. This can be stored as a boolean.
+
+7. Media: Any media (images, GIFs, stickers) sent with the message. This can be stored as a link to the media.

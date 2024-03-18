@@ -1,0 +1,44 @@
+import pytest
+import app
+from flask import json
+import hashlib
+from datetime import datetime, timedelta
+
+@pytest.fixture
+def client():
+	app.app.config['TESTING'] = True
+
+	with app.app.test_client() as client:
+		yield client
+
+	app.urls = {}
+	app.users = {}
+
+
+def test_shorten_url(client):
+	response = client.post('/shorten', json={'url': 'http://example.com', 'expiration': (datetime.now() + timedelta(days=1)).isoformat()})
+	assert response.status_code == 200
+	assert 'shortened_url' in json.loads(response.data)
+
+
+def test_redirect_url(client):
+	client.post('/shorten', json={'url': 'http://example.com', 'alias': 'test', 'expiration': (datetime.now() + timedelta(days=1)).isoformat()})
+	response = client.get('/test')
+	assert response.status_code == 302
+
+
+def test_get_analytics(client):
+	client.post('/register', json={'username': 'test', 'password': 'test'})
+	client.post('/shorten', json={'url': 'http://example.com', 'alias': 'test', 'username': 'test', 'expiration': (datetime.now() + timedelta(days=1)).isoformat()})
+	response = client.get('/analytics?username=test')
+	assert response.status_code == 200
+	assert len(json.loads(response.data)) == 1
+
+
+def test_register_user(client):
+	response = client.post('/register', json={'username': 'test', 'password': 'test'})
+	assert response.status_code == 200
+	assert 'message' in json.loads(response.data)
+
+	# Check that the password is hashed
+	assert app.users['test'].password == hashlib.sha256('test'.encode()).hexdigest()

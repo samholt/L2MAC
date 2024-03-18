@@ -1,0 +1,23 @@
+Global Chat Service (GCS) User Data Database Schema:
+
+1. User ID: A unique identifier for each user.
+
+2. Email: The user's email address. This will be used for login and password recovery.
+
+3. Hashed Password: The user's password, stored as a hashed value for security.
+
+4. Profile Picture: A link to the user's profile picture.
+
+5. Status Message: The user's status message.
+
+6. Privacy Settings: The user's privacy settings, including who can see their details and last seen status.
+
+7. Contact List: A list of the user's contacts, including blocked contacts and groups.
+
+8. Message History: A record of the user's sent and received messages.
+
+9. Group Chats: A list of the group chats the user is a part of.
+
+10. Status/Story Posts: A record of the user's status/story posts.
+
+11. Online/Offline Status: The user's current online/offline status.

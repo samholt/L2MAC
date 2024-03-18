@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Group Chat</title>
+</head>
+<body>
+	<h1>Group Chat: {{ group_name }}</h1>
+	<div id='messages'>
+		{% for message in messages %}
+			<p>{{ message.sender }}: {{ message.text }}</p>
+		{% endfor %}
+	</div>
+	<form action='/send-message' method='post'>
+		<input type='text' id='message' name='message'>
+		<input type='submit' value='Send'>
+	</form>
+</body>
+</html>

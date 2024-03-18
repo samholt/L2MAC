@@ -1,0 +1,5 @@
+1. Allow users to create accounts.
+2. Store user account data in a secure manner.
+3. Allow users to view all their shortened URLs.
+4. Allow users to edit or delete their shortened URLs.
+5. Allow users to view analytics for all their shortened URLs.

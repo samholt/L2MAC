@@ -1,0 +1,10 @@
+Global Chat Service (GCS) Design Document
+
+1. User Registration and Authentication
+2. User Profile Module
+3. Contact Management System
+4. Messaging Module
+5. Group Chat Functionality
+6. Status/Story Feature
+7. Web Application Version
+8. Connectivity and Offline Mode

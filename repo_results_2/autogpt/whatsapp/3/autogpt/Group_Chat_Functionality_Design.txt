@@ -1,0 +1,13 @@
+Group Chat Functionality Design:
+
+1. Creating Group Chats:
+- Users should be able to create group chats with a name and picture.
+- The system should store the group chat information securely.
+
+2. Adding or Removing Participants:
+- Users should be able to add or remove participants from their group chats.
+- The system should update the group chat information accordingly.
+
+3. Defining Admin Roles and Permissions:
+- Users should be able to define admin roles and permissions for their group chats.
+- The system should enforce the admin roles and permissions.

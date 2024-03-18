@@ -1,0 +1,6 @@
+1. Receive a URL and a custom short link from the user.
+2. Validate the URL.
+3. Check if the custom short link is available.
+4. If available, associate the custom short link with the URL.
+5. Store the original URL and its custom short link in the 'urls.json' file.
+6. Return the custom short link to the user.

@@ -1,0 +1,9 @@
+Status/Story Feature Design:
+
+1. Posting Image Statuses:
+- Users should be able to post image statuses.
+- The system should make the statuses visible for a limited time.
+
+2. Controlling Who Can See the Status:
+- Users should be able to control who can see their status.
+- The system should respect the user's privacy settings when displaying their status.

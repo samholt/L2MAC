@@ -1,0 +1,4 @@
+1. Allow users to set an expiration date/time for their shortened URLs or custom short links.
+2. Store this data in the 'urls.json' file.
+3. When a shortened URL or custom short link is accessed, check if it has expired.
+4. If it has expired, return an error message to the user.

@@ -1,0 +1,5 @@
+Base Structure for OMS:
+- User Management
+- Posting and Content Management
+- Social Interaction
+- Trending & Discovery

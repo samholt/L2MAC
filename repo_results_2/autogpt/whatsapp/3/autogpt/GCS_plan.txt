@@ -1,0 +1,8 @@
+1. User Registration and Authentication System: Design and implement a scalable and secure system that allows users to sign up using email and recover forgotten passwords.
+2. User Profile Module: Develop a module that enables users to set profile pictures, status messages, and configure privacy settings for user details and last seen status.
+3. Contact Management System: Create a system that allows users to block/unblock contacts and create, edit, and manage groups.
+4. Messaging Module: Implement a module that supports real-time text messages, message read receipts, end-to-end encryption, image sharing, and emojis, GIFs, and stickers support.
+5. Group Chat Functionality: Design and develop functionality with features like creating group chats with a name and picture, adding or removing participants, and defining admin roles and permissions.
+6. Status/Story Feature: Build a feature that allows users to post image statuses visible for a limited time and control who can see the status.
+7. Web Application Version: Develop a web application version of the GCS that is accessible from browsers.
+8. Connectivity and Offline Mode: Implement connectivity and offline mode by incorporating message queuing for offline users and displaying online/offline status.

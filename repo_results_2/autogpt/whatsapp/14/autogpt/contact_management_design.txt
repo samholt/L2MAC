@@ -1,0 +1,8 @@
+Contact Management Module Design:
+1. Block/Unblock Contacts:
+   - Allow users to block/unblock other users
+   - Store the block list
+2. Group Management:
+   - Allow users to create, edit, and manage groups
+   - Validate the group details
+   - Store the group details

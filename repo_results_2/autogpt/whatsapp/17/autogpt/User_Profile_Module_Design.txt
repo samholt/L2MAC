@@ -1,0 +1,7 @@
+User Profile Module Design:
+1. Profile Settings:
+   - Users can set profile pictures
+   - Users can set status messages
+2. Privacy Settings:
+   - Users can configure privacy settings for user details
+   - Users can configure privacy settings for last seen status

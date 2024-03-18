@@ -1,0 +1,7 @@
+Web Application Design:
+1. User Interface:
+   - The web application should have a user-friendly interface
+2. Connectivity:
+   - The web application should be accessible from browsers
+3. Offline Mode:
+   - The web application should support offline mode

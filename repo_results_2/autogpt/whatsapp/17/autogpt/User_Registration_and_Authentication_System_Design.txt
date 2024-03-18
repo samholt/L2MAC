@@ -1,0 +1,9 @@
+User Registration and Authentication System Design:
+1. User Registration:
+   - Users can sign up using email
+   - Passwords are hashed and stored securely
+2. User Authentication:
+   - Users can log in using email and password
+   - Session management for logged in users
+3. Password Recovery:
+   - Users can recover forgotten passwords through their email

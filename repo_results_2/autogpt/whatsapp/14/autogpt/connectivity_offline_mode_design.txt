@@ -1,0 +1,7 @@
+Connectivity and Offline Mode Features Design:
+1. Message Queuing:
+   - Implement a system to queue messages for offline users
+   - Ensure the queued messages are delivered when the user comes online
+2. Online/Offline Status:
+   - Implement a system to display the online/offline status of users
+   - Ensure the status is updated in real-time

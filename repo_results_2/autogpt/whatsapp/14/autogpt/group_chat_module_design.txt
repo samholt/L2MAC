@@ -1,0 +1,13 @@
+Group Chat Module Design:
+1. Group Creation:
+   - Allow users to create group chats with names and pictures
+   - Validate the group details
+   - Store the group details
+2. Participant Management:
+   - Allow users to add or remove participants
+   - Validate the participant details
+   - Store the participant details
+3. Admin Roles and Permissions:
+   - Allow users to define admin roles and permissions
+   - Validate the admin roles and permissions
+   - Store the admin roles and permissions

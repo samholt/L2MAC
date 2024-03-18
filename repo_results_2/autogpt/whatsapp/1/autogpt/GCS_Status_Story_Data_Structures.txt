@@ -1,0 +1,11 @@
+Global Chat Service (GCS) Status/Story Data Structures:
+
+1. Status ID: A unique identifier for each status. This can be stored as a string.
+
+2. User ID: The ID of the user who posted the status. This can be stored as a string.
+
+3. Image: A link to the image in the status. This can be stored as a string.
+
+4. Timestamp: The time when the status was posted. This can be stored as a datetime object.
+
+5. Visibility: Who can see the status. This can be stored as a list of user IDs or as a string indicating 'everyone' or 'contacts only'.

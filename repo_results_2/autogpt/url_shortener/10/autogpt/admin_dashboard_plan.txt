@@ -1,0 +1,4 @@
+1. Allow administrators to view all shortened URLs.
+2. Allow administrators to delete URLs or user accounts.
+3. Provide a system performance monitor.
+4. Provide a way for administrators to view system-wide analytics.

@@ -1,0 +1,13 @@
+User Profile Module Design:
+1. Profile Picture:
+   - Allow users to upload a profile picture
+   - Validate the uploaded picture
+   - Store the picture securely
+2. Status Message:
+   - Allow users to set a status message
+   - Validate the status message
+   - Store the status message
+3. Privacy Settings:
+   - Allow users to configure privacy settings for user details and last seen status
+   - Validate the privacy settings
+   - Store the privacy settings

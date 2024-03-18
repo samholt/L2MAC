@@ -1,0 +1,10 @@
+Contact Management System Design:
+
+1. Block/Unblock Contacts:
+- Users should be able to block and unblock other users.
+- The system should prevent blocked users from sending messages to the user who blocked them.
+
+2. Create, Edit, and Manage Groups:
+- Users should be able to create groups with other users as participants.
+- Users should be able to add and remove participants from their groups.
+- Users should be able to edit the name and picture of their groups.

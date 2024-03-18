@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manage Visibility</title>
+</head>
+<body>
+	<h1>Manage Visibility</h1>
+	{% if message %}
+		<p>{{ message }}</p>
+	{% endif %}
+	<form method="POST">
+		<label for="status_id">Status ID:</label><br>
+		<input type="text" id="status_id" name="status_id" value="{{ status_id }}"><br>
+		<label for="visibility">Visibility:</label><br>
+		<select id="visibility" name="visibility">
+			<option value="public">Public</option>
+			<option value="private">Private</option>
+		</select><br>
+		<input type="submit" value="Update">
+	</form>
+</body>
+</html>

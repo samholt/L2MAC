@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Welcome to Chat App</h1>
+	<form id="signupForm">
+		<h2>Sign Up</h2>
+		<label for="email">Email:</label><br>
+		<input type="email" id="email" name="email"><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br>
+		<input type="submit" value="Sign Up">
+	</form>
+	<script>
+		$("#signupForm").submit(function(event) {
+			event.preventDefault();
+			var email = $("#email").val();
+			var password = $("#password").val();
+			$.ajax({
+				url: '/signup',
+				type: 'POST',
+				contentType: 'application/json',
+				data: JSON.stringify({
+					'email': email,
+					'password': password
+				}),
+				success: function(response) {
+					alert(response.message);
+				},
+				error: function(response) {
+					alert(response.responseJSON.message);
+				}
+			});
+		});
+	</script>
+</body>
+</html>
