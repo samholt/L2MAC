@@ -1,0 +1,29 @@
+from task_75 import is_multiply_prime
+
+def test_is_multiply_prime():
+	assert is_multiply_prime(30) == True
+	assert is_multiply_prime(31) == False
+	assert is_multiply_prime(2) == False
+	assert is_multiply_prime(3) == False
+	assert is_multiply_prime(5) == False
+	assert is_multiply_prime(7) == False
+	assert is_multiply_prime(11) == False
+	assert is_multiply_prime(13) == False
+	assert is_multiply_prime(17) == False
+	assert is_multiply_prime(19) == False
+	assert is_multiply_prime(23) == False
+	assert is_multiply_prime(29) == False
+	assert is_multiply_prime(37) == False
+	assert is_multiply_prime(41) == False
+	assert is_multiply_prime(43) == False
+	assert is_multiply_prime(47) == False
+	assert is_multiply_prime(53) == False
+	assert is_multiply_prime(59) == False
+	assert is_multiply_prime(61) == False
+	assert is_multiply_prime(67) == False
+	assert is_multiply_prime(71) == False
+	assert is_multiply_prime(73) == False
+	assert is_multiply_prime(79) == False
+	assert is_multiply_prime(83) == False
+	assert is_multiply_prime(89) == False
+	assert is_multiply_prime(97) == False

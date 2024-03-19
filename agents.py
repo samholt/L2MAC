@@ -85,6 +85,10 @@ class Agent:
 class LLMatic(Agent):
     def __init__(self, env, config, logger, rate_limiter):
         super().__init__(env, config, logger, rate_limiter)
+        self.config = config
+        self.reset()
+
+    def reset(self):
         self.name = 'LLMatic'
         self.load_from_checkpoint = ''
         self.replay_llm_responses_path = ''
@@ -119,9 +123,32 @@ class LLMatic(Agent):
 
         self.folder_path = f"{self.config.run.log_path.split('.txt')[0]}/{self.env.env_task_id}/{self.env.seed}/"
         Path(self.folder_path).mkdir(parents=True, exist_ok=True)
-        self.max_tokens = get_model_max_tokens(config)
+        self.max_tokens = get_model_max_tokens(self.config)
         self.functions = function_definition_list_factory()
-        self.system_message = {"role": "system", "content": f'''
+        if self.env.env_task_id == 'HumanEval':
+            system_message = f'''
+Objective: Write code for a HumanEval task.
+Please note that the code should be fully functional. No placeholders.
+Only use the functions you have been provided with.
+Only use the `write_files` to output code.
+
+You must act autonomously and you will receive no human input at any stage. You have to return as output the complete code for completing this task, and correctly incorporate it into the existing code base.
+You always write out the whole file contents. You always indent code with tabs.
+Please always view the files before writing to them, to make sure you are writing to the correct files.
+When writing a test, make the filename start with the prefix 'test_'.
+
+Provide the minimal code necessary to achieve the task conditioned on the existing generated code---including changing the existing generated code.
+
+You cannot visualize any graphical output. You exist within a Actor Model machine, and when you list out steps, each step will be taken by a new separate sub-ChatGPT model. When you list out a sub-task steps, you can optionally specify the sub-task validation to check that it has been completed successfully.
+
+No data saved to disk will persist between steps or write operations.
+                               
+If a test is failing the error could be the code, or the test is incorrect, so feel free to overwrite and change the tests when they are incorrect, to make all tests pass.
+
+Use the functions provided. When calling functions only provide a RFC8259 compliant JSON request following this format without deviation.
+'''
+        else:
+            system_message = f'''
 Objective: Write code for a large system design task.
 Please note that the code should be fully functional. No placeholders.
 Only use the functions you have been provided with.
@@ -141,7 +168,8 @@ You cannot use any databases as none are setup in the local environment, instead
 If a test is failing the error could be the code, or the test is incorrect, so feel free to overwrite and change the tests when they are incorrect, to make all tests pass.
 
 Use the functions provided. When calling functions only provide a RFC8259 compliant JSON request following this format without deviation.
-'''}
+'''
+        self.system_message = {"role": "system", "content": system_message}
 
     def print_dialog(self, messages, response_msg=False):
         num_tokens = num_tokens_consumed_by_chat_request(messages=messages, functions=self.functions)
@@ -233,18 +261,32 @@ self.re_tries)
         return ', '.join([f'`{fn}`'for fn in fns])
 
     def run(self, state=''):
-        try:
+        # try:
+        if self.env.env_task_id == 'HumanEval':
+            solutions = []
+            for i, problem in enumerate(self.env.problems.values()):
+                # if i >= 124:
+                if i == 84:
+                    file_dict = self._run(problem)
+                    sol = '\n'.join(file_dict[f"task_{problem['task_id'].split('/')[1]}.py"])
+                    solutions.append({'task_id': problem['task_id'], 'solution': sol})
+                # Save problem somehow.
+            from human_eval.data import write_jsonl
+            write_jsonl('solutions_HumanEval.jsonl', solutions)
+            write_jsonl(f'{self.folder_path}solutions_HumanEval.jsonl', solutions)
+        else:
             return self._run(state)
-        except Exception as e:
-            self.logger.error('Error in LLMatic.run()')
-            self.logger.error(e)
-            self.logger.error(traceback.format_exc())
-            self.save_agent_state(self.sub_messages)
-            write_files_from_dict(self.file_dict, base_dir=f'{self.folder_path}/{self.name}')
-            raise e
+        # except Exception as e:
+        #     self.logger.error('Error in LLMatic.run()')
+        #     self.logger.error(e)
+        #     self.logger.error(traceback.format_exc())
+        #     self.save_agent_state(self.sub_messages)
+        #     write_files_from_dict(self.file_dict, base_dir=f'{self.folder_path}/{self.name}')
+        #     raise e
 
 
     def _run(self, state=''):
+        self.reset()
         if not self.load_from_checkpoint:
             # unit_tests = self.env.ut
             # self.file_dict['test_all.py'] = add_line_numbers(unit_tests.split('\n'))
@@ -253,7 +295,36 @@ self.re_tries)
             # Read the unit tests from the environment
             # with open(f'./data/donnemartin-system-design-oop/object_oriented_design/{self.env.env_task_id}/unit_tests_train.py', 'r') as f:
             #     unit_tests = f.read()
-            self.meta_messages.append({"role": "user", "content": f"""
+            if self.env.env_task_id == 'HumanEval':
+                first_message = f"""
+You will get instructions for code to write.
+Please note that the code should be fully functional. No placeholders.
+
+Follow a language and framework appropriate best practice file naming convention.
+Make sure that files contain all imports, types etc.  The code should be fully functional. Make sure that code in different files are compatible with each other.
+When writing code if you are unsure, write a plausible implementation.
+
+Useful to know:
+
+Use Python.
+Always add a comment briefly describing the purpose of the function definition.
+Add comments explaining very complex bits of logic.
+Always follow the best practices for the requested languages for folder/file structure and how to package the project.
+When writing a test, make the filename start with the prefix 'test_'.
+                                       
+Python toolbelt preferences:
+- pytest
+- dataclasses
+
+Objective: Please only complete the code for the following prompt; call it task_{state['task_id'].split('/')[1]}.py:```
+{state['prompt']}
+```
+
+
+Understand the problem, by creating an extremely detailed step-by-step plan, where each step is long (multiple sentences) and in total includes every single feature requirement specified above, feel free to copy directly from it. Create additional tests, checks and evaluation at each step when applicable to help make an excellent code implementation, where all the code is fully functional. Use best software design practices, and you can output large amounts of code at once. Please include a last sentence to create and run tests when implementing or writing code in that same step. You will receive no human input at any stage, so you cannot use a human to test. Only create a detailed plan to begin with, which includes designing and running tests to check that they all pass. Please be sure to include all of the specified feature requirements in the following plan.
+"""
+            else:
+                first_message = f"""
 You will get instructions for code to write.
 First lay out the names of the core classes, functions, methods that will be necessary, As well as a quick comment on their purpose.
 Do not comment on what every file does. Please note that the code should be fully functional. No placeholders.
@@ -273,7 +344,7 @@ Always add a comment briefly describing the purpose of the function definition.
 Add comments explaining very complex bits of logic.
 Always follow the best practices for the requested languages for folder/file structure and how to package the project.
 You can use any package and any other packages you wish to install.
-You cannot use any databases as none are setup in the local environment, instead mock a database with an in memory dictionary to store data. No data saved to disk will persis between steps or write operations.
+You cannot use any databases as none are setup in the local environment, instead mock a database with an in memory dictionary to store data. No data saved to disk will persist between steps or write operations.
 When writing a test, make the filename start with the prefix 'test_'.
                                        
 Python toolbelt preferences:
@@ -286,7 +357,8 @@ Objective:```
 ```
 
 Understand the problem, by creating an extremely detailed step-by-step plan, where each step is long (multiple sentences) and in total includes every single feature requirement specified above, feel free to copy directly from it. Use no more than 10 steps in the plan. Create additional tests, checks and evaluation at each step when applicable to help make an excellent code implementation, where all the code is fully functional. Use best software design practices, and you can output large amounts of code at once. Please include a last sentence to create and run tests when implementing or writing code in that same step. You will receive no human input at any stage, so you cannot use a human to test. Only create a detailed plan to begin with, which includes designing and running tests to check that they all pass. Please be sure to include all of the specified feature requirements in the following plan.
-""", "function_call": {"name": "provide_detailed_sub_task_steps_for_sub_agents"}})
+"""
+            self.meta_messages.append({"role": "user", "content": first_message, "function_call": {"name": "provide_detailed_sub_task_steps_for_sub_agents"}})
         steps = []
         # Loop until we get a multi-step plan, as sometimes the first plan is not multi-step, and only a single step.
         max_reflections = 1
@@ -324,7 +396,10 @@ Please reflect on the plan, and increase the number of generated steps to that o
             steps = fuction_to_call(**function_args)
         self.steps = steps
         # self.base_dialog = deepcopy(current_dialog)
-        self.base_dialog = deepcopy([self.system_message])
+        if self.env.env_task_id == 'HumanEval':
+            self.base_dialog = deepcopy([self.system_message, {"role": "user", "content": first_message}])
+        else:
+            self.base_dialog = deepcopy([self.system_message])
         # Remove provide_detailed_sub_task_steps_for_sub_agents function from functions list
         self.functions = [function for function in self.functions if function['name'] != 'provide_detailed_sub_task_steps_for_sub_agents']
         previous_step_output_summary = ""
@@ -408,9 +483,14 @@ Has the sub task step been completed of: ```
             self.logger.info('[STEP COMPLETE] sub step completed')
         self.logger.info('[TASK COMPLETE SUCCESSFULLY!!] All steps complete')
         self.logger.info('')
-        write_files_from_dict(self.file_dict, base_dir=f'{self.folder_path}/{self.name}')
-        self.save_agent_state(self.sub_messages)
-        return f'{self.folder_path}/{self.name}'
+        if self.env.env_task_id == 'HumanEval':
+            benchmark_task_id = state['task_id'].split('/')[1]
+            write_files_from_dict(self.file_dict, base_dir=f'{self.folder_path}{self.name}/{benchmark_task_id}')
+            return self.file_dict
+        else:
+            write_files_from_dict(self.file_dict, base_dir=f'{self.folder_path}{self.name}')
+            self.save_agent_state(self.sub_messages)
+            return f'{self.folder_path}/{self.name}'
 
     
 class ZeroShotAgent(Agent):

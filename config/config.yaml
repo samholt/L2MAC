@@ -18,14 +18,16 @@ relentless:
   lam: 10
 setup:
   use_azure_api: true
-  debug_mode: false
+  debug_mode: true
   flush_mode: false
   multi_process_results: false
   multi_process_cores: 4
   experiment: 'MAIN_TABLE'
-  methods_to_evaluate: ['LLMatic', 'ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion', 'ZeroShot']
+  # methods_to_evaluate: ['LLMatic', 'ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion', 'ZeroShot']
+  methods_to_evaluate: ['LLMatic']
   # methods_to_evaluate: ['ZeroShot', 'CodeT', 'SelfRefine', 'Reflexion', 'ZeroShot']
-  envs_to_evaluate: ['donnemartin-system-design-oop-url_shortener', 'donnemartin-system-design-oop-twitter','donnemartin-system-design-oop-whatsapp'] # Core paper environments
+  # envs_to_evaluate: ['donnemartin-system-design-oop-url_shortener', 'donnemartin-system-design-oop-twitter','donnemartin-system-design-oop-whatsapp'] # Core paper environments
+  envs_to_evaluate: ['HumanEval'] #, 'MBPP'] # Core paper environments
   # envs_to_evaluate: ['donnemartin-system-design-oop-recipe', 'donnemartin-system-design-oop-eventplanner', 'donnemartin-system-design-oop-finance'] # Appendix paper environments
   wandb:
     project: LLMatic
@@ -33,7 +35,7 @@ setup:
   log_dir: logs
   torch_deterministic: true
   seed_start: 0
-  seed_runs: 20
+  seed_runs: 1
   enable_tests: true
   cuda: true
   data_science_env_use_description: false

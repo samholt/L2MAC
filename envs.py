@@ -59,6 +59,25 @@ import json
 #     # In other cases, raise a TypeError
 #     raise TypeError(f"Unsupported data types: y_true type: {type(y_true.iloc[0])}, y_pred type: {type(y_pred[0])}")
 
+
+def get_env(env_name, config, logger, seed):
+    if 'data-science' in env_name:
+        config['dataset_id'] = env_name.split('data-science')[-1][1:]
+        config['use_description'] = config.setup.data_science_env_use_description
+        return DataScienceEnvironment(config, logger, env_name)
+    elif 'donnemartin-system-design-oop-' in env_name:
+        config['env_task_id'] = env_name.split('donnemartin-system-design-oop-')[1]
+        return SystemDesignOopEnvironment(config, logger, env_name, seed)
+    elif 'HumanEval' in env_name or 'MBPP' in env_name:
+        config['env_task_id'] = env_name
+        return CodeBenchmarkEnvironment(config, logger, env_name, seed)
+    elif 'insight-large-code-base-' in env_name:
+        config['env_task_id'] = env_name.split('insight-large-code-base-')[1]
+        return ExistingLargeCodeBaseChangeEnvironment(config, logger, env_name, seed)
+    else:
+        raise Exception(f'Environment {env_name} not found')
+    
+
 def maybe_fit_preprocessor(preprocessor, X_train):
     # Attempt to transform a single record to see if preprocessor has been fitted
     try:
@@ -188,6 +207,112 @@ class SystemDesignOopEnvironment(Environment):
         info = None
         return state_out, reward, done, info
     
+
+
+class CodeBenchmarkEnvironment(Environment):
+    def __init__(self, config, logger, env_name, seed):
+        super().__init__(config, logger, env_name, seed)
+        self.seed_value = None
+        self.description = None
+        self.attribute_names = None
+        self.prepend_code_libraries = ''
+
+    def set_seed(self, seed_value):
+        self.seed_value = seed_value
+        random.seed(seed_value)
+        np.random.seed(seed_value)
+
+    def reset(self):
+        # Fetch the eval examples
+        env_task_id = self.config.get('env_task_id')
+        self.env_task_id = self.config.get('env_task_id')
+        if 'HumanEval' in env_task_id:
+            from human_eval.data import write_jsonl, read_problems
+            problems = read_problems()
+        elif 'MBPP' in env_task_id:
+            # load dataset of 'data/benchmark/MBPP/mbpp.jsonl' 
+            with open('data/benchmark/MBPP/mbpp.jsonl', 'r') as file:
+                problems = json.load(file)
+        self.problems = problems
+        self.desc = ''
+        self.ut = ''
+
+    def get_obs(self):
+        if self.config.get('use_description', False):
+            # state = f"description:{self.description}\nattribute_names:{self.attribute_names}"
+            state = f"{self.attribute_names}"
+            return state
+        else:
+            return None
+        
+    # @timeout(60*3, timeout_exception=StopIteration)
+    def execute_user_code_lines(self, code_string):
+        # try:
+        result = self.executor.execute_user_code_lines(code_string)
+        # except Exception as e:
+        #     print(e)
+        return result
+    
+#     def create_baseline_prompt(self):
+#         from prompts import baseline_system_prompt
+#         task_prompt = f'''
+# Objective: """
+# {self.task_data['task_description']}
+# """
+
+# Make sure the generated code adheres to this specified code interface, as it will be unit tested against this interface: """
+# {self.task_data['code_interface']}
+# """
+# '''
+#         prompt = baseline_system_prompt(task_prompt)
+#         return prompt
+    
+    # @timeout(60*3, timeout_exception=StopIteration)
+    def execute_final_user_code(self, code_string):
+        # try:
+        # Create a temporary module to hold the user code
+        code_string = f'{self.prepend_code_libraries}\n{code_string}'
+        user_code_module = importlib.types.ModuleType("user_code")
+        exec(code_string, user_code_module.__dict__)
+
+        # Train the model using the provided code
+        self.log('Training model...')
+        t0 = time.perf_counter()
+        model, preprocessor = user_code_module.train_model(self.train_data.copy(), self.train_labels)
+        self.log(f"Model trained. Elapsed time: {time.perf_counter() - t0}s]")
+        if preprocessor is not None:
+            # Preprocess the test data using the same transformer
+            maybe_fit_preprocessor(preprocessor, self.train_data.copy())
+            test_data_processed = preprocessor.transform(self.test_data)
+            # Predict using the trained model
+            try:
+                predictions = model.predict(test_data_processed)
+            except ValueError as e:
+                predictions = model.predict(self.test_data)
+            # Calculate the reward as the accuracy of the prediction
+            reward = f1_score(self.test_labels, predictions, average='macro')
+        else:
+            # Predict using the trained model
+            predictions = model.predict(self.test_data)
+            # Calculate the reward as the accuracy of the prediction
+            reward = f1_score(self.test_labels, predictions, average='macro')
+        # except Exception as e:
+        #     print(f"An error occurred in the user-generated code: {e}")
+        #     reward = 0
+        return reward
+
+    def step(self, code_string):
+        try:
+            reward = self.execute_final_user_code(code_string)
+        except StopIteration:
+            reward = 0
+
+        state_out = None
+        done = True
+        info = None
+        return state_out, reward, done, info
+    
+
 
 
 class ExistingLargeCodeBaseChangeEnvironment(Environment):
@@ -415,20 +540,6 @@ class DataScienceEnvironment(Environment):
         info = None
         return state_out, reward, done, info
 
-def get_env(env_name, config, logger, seed):
-    if 'data-science' in env_name:
-        config['dataset_id'] = env_name.split('data-science')[-1][1:]
-        config['use_description'] = config.setup.data_science_env_use_description
-        return DataScienceEnvironment(config, logger, env_name)
-    elif 'donnemartin-system-design-oop-' in env_name:
-        config['env_task_id'] = env_name.split('donnemartin-system-design-oop-')[1]
-        return SystemDesignOopEnvironment(config, logger, env_name, seed)
-    elif 'insight-large-code-base-' in env_name:
-        config['env_task_id'] = env_name.split('insight-large-code-base-')[1]
-        return ExistingLargeCodeBaseChangeEnvironment(config, logger, env_name, seed)
-    else:
-        raise Exception(f'Environment {env_name} not found')
-    
 import unittest
 
 class TestEnvironment(unittest.TestCase):
