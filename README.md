@@ -18,7 +18,7 @@
 ## News
 🌟 May. 7 - 11th, 2024: We will present L2MAC at the International Conference on Learning Representations (ICLR) 2024. Come meet us at ICLR in Vienna Austria! Please reach out to me at sih31 (at) cam.ac.uk so we can meet, virtual meetings accepted as well!
 
-🌟 April. 13, 2024: L2MAC is fully open-sourced with the initial version released.
+🌟 April. 23, 2024: L2MAC is fully open-sourced with the initial version released.
 
 🚀 Jan. 16, 2024: The paper [L2MAC: Large Language Model Automatic Computer for Extensive Code Generation
 ](https://arxiv.org/abs/2310.02003) is accepted for presentation at ICLR 2024!
