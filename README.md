@@ -199,6 +199,8 @@ Click here for the complete files on [github](https://github.com/samholt/L2MAC/t
 
 ## Entire Book | Italian Pasta Recipe Book
 
+Just give L2MAC the prompt of `Write a complete recipe book for the following book title of "Twirls & Tastes: A Journey Through Italian Pasta". Description: "Twirls & Tastes" invites you on a flavorful expedition across Italy, exploring the diverse pasta landscape from the sun-drenched hills of Tuscany to the bustling streets of Naples. Discover regional specialties, learn the stories behind each dish, and master the art of pasta making with easy-to-follow recipes that promise to delight your senses.` and it can generate a complete 26-page length book automatically.
+
 [![Book Cover](docs/public/images/book_cover.png)](https://samholt.github.io/L2MAC/TwirlsAndTastesAJourneyThroughItalianPasta.pdf)
 
 Click here for the [complete book](https://samholt.github.io/L2MAC/TwirlsAndTastesAJourneyThroughItalianPasta.pdf); L2MAC produced all the text for the book, and all images were created with DALLE.
