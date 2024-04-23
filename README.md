@@ -199,11 +199,9 @@ Click here for the complete files on [github](https://github.com/samholt/L2MAC/t
 
 ## Entire Book | Italian Pasta Recipe Book
 
-<iframe src="https://samholt.github.io/L2MAC/TwirlsAndTastesAJourneyThroughItalianPasta.pdf" width="100%" height="1200px">
-    This browser does not support PDFs. Please download the PDF to view it: <a href="https://samholt.github.io/L2MAC/TwirlsAndTastesAJourneyThroughItalianPasta.pdf">Download PDF</a>.
-</iframe>
+[![Book Cover](docs/public/images/book_cover.png)](https://samholt.github.io/L2MAC/TwirlsAndTastesAJourneyThroughItalianPasta.pdf)
 
-Click here for the [complete book](docs/public/TwirlsAndTastesAJourneyThroughItalianPasta.pdf); L2MAC produced all the text for the book, and all images were created with DALLE.
+Click here for the [complete book](https://samholt.github.io/L2MAC/TwirlsAndTastesAJourneyThroughItalianPasta.pdf); L2MAC produced all the text for the book, and all images were created with DALLE.
 
 The complete output text files are on [github](https://github.com/samholt/L2MAC/tree/master/docs/generated_examples/italian_pasta_recipe_book); you can [download them here](docs/public/italian_pasta_recipe_book.zip). The code and prompt to generate this is [here](https://github.com/samholt/L2MAC/blob/master/examples/generate_book.py).
 
