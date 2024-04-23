@@ -55,6 +55,10 @@ export default defineConfig({
               },
             ],
           },
+          {
+            text: 'Comparison to AutoGPT',
+            link: 'get_started/comparison_to_autogpt',
+          },
         ],
       },
       {

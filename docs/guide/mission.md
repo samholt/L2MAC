@@ -1,3 +1,5 @@
+# Mission
+
 > “You want to wake up in the morning and open up your computer to find it continued working on your exact work task progressing it for you automatically, perfectly aligned to your workflow and exactly how you would like it done – and that’s what being in a world of AI assistants is all about. It’s about empowering humans to significantly achieve and produce more, than we have ever been able to in the past. And I can’t think of anything more exciting than defining and making this future a reality.” – Sam Holt (L2MAC's Creator).
 
 ## Making AI Assistants Directed
