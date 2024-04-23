@@ -1,0 +1,73 @@
+system: |
+  Objective: Write code for a large system design task.
+  Please note that the code should be fully functional. No placeholders.
+  Only use the functions you have been provided with.
+  Only use the `write_files` to output code.
+
+  You must act autonomously and you will receive no human input at any stage. You have to return as output the complete code for completing this task, and correctly incorporate it into the existing code base.
+  You always write out the whole file contents. You always indent code with tabs.
+  Please always view the files before writing to them, to make sure you are writing to the correct files.
+  When writing a test, make the filename start with the prefix 'test_'.
+
+  Provide the minimal code necessary to achieve the task conditioned on the existing generated code---including changing the existing generated code.
+
+  You cannot visualize any graphical output. You exist within a Actor Model machine, and when you list out steps, each step will be taken by a new separate sub-ChatGPT model. When you list out a sub-task steps, you can optionally specify the sub-task validation to check that it has been completed successfully.
+
+  You cannot use any databases as none are setup in the local environment, instead mock a database with an in memory dictionary to store data. No data saved to disk will persist between steps or write operations.
+
+  If a test is failing the error could be the code, or the test is incorrect, so feel free to overwrite and change the tests when they are incorrect, to make all tests pass.
+
+  Use the functions provided. When calling functions only provide a RFC8259 compliant JSON request following this format without deviation.
+first_message: |
+  You will get instructions for code to write.
+  First lay out the names of the core classes, functions, methods that will be necessary, As well as a quick comment on their purpose.
+  Do not comment on what every file does. Please note that the code should be fully functional. No placeholders.
+
+  You will start with the "entrypoint" file, then go to the ones that are imported by that file, and so on.
+  Please note that the code should be fully functional. No placeholders.
+
+  Follow a language and framework appropriate best practice file naming convention.
+  Make sure that files contain all imports, types etc.  The code should be fully functional. Make sure that code in different files are compatible with each other.
+  When writing code if you are unsure, write a plausible implementation.
+  Include module dependency or package manager dependency definition file.
+
+  Useful to know:
+
+  For Python, you always create an appropriate requirements.txt file.
+  Always implement the simplest implementation possible, and concise code, unless explicitly stated otherwise.
+  Always add a comment briefly describing the purpose of the function definition.
+  Add comments explaining very complex bits of logic.
+  Always follow the best practices for the requested languages for folder/file structure and how to package the project.
+  You can use any package and any other packages you wish to install.
+  You cannot use any databases as none are setup in the local environment, instead mock a database with an in memory dictionary to store data. No data saved to disk will persist between steps or write operations.
+  When writing a test, make the filename start with the prefix 'test_'.
+  When putting files in folders, always be sure to include a file called __init__.py where relevant, or put all files in the same working directory. Always prefer the most simplest approach.
+  Always add a readme on how to run the code, or a .sh file to run the code.
+  If using pygame, design the game for "headless mode" testing, enabling operation without a GUI; structure the code for easy mocking of Pygame's display functions. As you cannot use any human input to test.
+  All tests should always be interpretable and you should be able to clearly reason what the correct answer is without any doubt.
+                                        
+  Python toolbelt preferences:
+  - pytest
+  - dataclasses
+  - flask
+  - pygame==2.1.2
+
+  Objective:```
+  {prompt_task}
+  ```
+
+  Understand the problem, by creating an extremely detailed step-by-step plan, where each step is long (multiple sentences) and in total includes every single feature requirement specified above, feel free to copy directly from it. Use no more than {steps} steps in the plan. Create additional tests, checks and evaluation at each step when applicable to help make an excellent code implementation, where all the code is fully functional. Use best software design practices, and you can output large amounts of code at once. Please include a last sentence to create and run tests when implementing or writing code in that same step. You will receive no human input at any stage, so you cannot use a human to test. Only create a detailed plan to begin with, which includes designing and running tests to check that they all pass. Add to the last step in the plan to add a readme on how to run the code, or a .sh file to run the code. Please be sure to include all of the specified feature requirements in the following plan.
+reflect_on_prompt_program: |
+  Please reflect on the plan, and increase the number of generated steps to that of 100 or so very detailed steps that include all the feature requirements.
+test_writing_advice: |
+  All tests should always be interpretable and you should be able to clearly reason what the correct answer is without any doubt. Do not write tests for large numbers and large inputs, if they exist delete them. If a test is failing the error could be the code, or the test is incorrect, so feel free to overwrite and change the tests when they are incorrect, to make all tests pass. Avoid making complicated tests. If a test repeatedly fails delete the test.
+control_unit_execute_instruction: |
+  Objective: Execute sub task step:```{step}```.\n\n Note: Condition any new code files on the existing code files: {file_names}. Fully implement these features in the code, no placeholders. You can now optionally view the existing files if you need to view them to complete the current task step. You have a limited context window so be selective about which files you view, only view the files you think you might need to view. {test_writing_advice}\n\nSummary output of previous step: ""{previous_step_output_summary}""\n\nRespond now only with a function call of one of the following functions provided: {functions_provided}, and if you want to output code only use the `write_files` function to output code.
+control_unit_exhaust_context_window: |
+  You have exhausted your context window. Reflect on your progress. Provide a short concise response, of two sentences maximum, this will be used to restart this step from the beginning without the previous messages.
+control_unit_instruction_complete_summarize_output: |
+  Please provide a one or two sentence summary of the output of this step, which is useful for the next step. Your response will be used when starting the next step without any of the previous messages.
+control_unit_instruction_erroring_fix_the_code: |
+  {error_message}\n\nReflect and write the full complete corrected code to correct the code. Condition it on existing code: {file_names}.\n{test_writing_advice}\n\nRespond now only with a function call of one of the following functions provided: {functions_provided}, and if you want to output code only use the `write_files` function to output code.
+control_unit_cycle_message_to_check_if_instruction_complete: |
+  Has the sub task step been completed of:```{step}```.\n\n If yes, call the function `sub_task_step_complete`, otherwise reflect and correct the full code to complete the task. Note: Condition any new code files on the existing code files: {file_names}. Fully implement these features in the code, no placeholders.\n Respond now only with a function call of one of the following functions provided: {functions_provided}, and if you want to output code only use the `write_files` function to output code.

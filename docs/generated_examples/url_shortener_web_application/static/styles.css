@@ -1,0 +1,12 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+form {
+	margin-bottom: 20px;
+}
+
+input[type="url"], input[type="submit"] {
+	margin-top: 10px;
+}
+

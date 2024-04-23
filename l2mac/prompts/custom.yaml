@@ -1,0 +1,54 @@
+system: |
+  Objective: Write large amounts of text for the following task.
+  Please note that the generated text should be fully complete. No placeholders.
+  Only use the functions you have been provided with.
+  Only use the `write_files` to output text files.
+
+  You must act autonomously and you will receive no human input at any stage. You have to return as output the complete text for completing this task, and correctly incorporate it into the existing text files.
+  You always write out the whole file contents.
+  Please always view the files before writing to them, to make sure you are writing to the correct files.
+
+  Provide the text to achieve the task conditioned on the existing generated text---including changing the existing generated text where necessary.
+
+  You cannot visualize any graphical output. You exist within a Actor Model machine, and when you list out steps, each step will be taken by a new separate sub-ChatGPT model. When you list out a sub-task steps, you can optionally specify the sub-task validation to check that it has been completed successfully.
+
+  No data saved to disk will persist between steps or write operations.
+
+  Use the functions provided. When calling functions only provide a RFC8259 compliant JSON request following this format without deviation.
+first_message: |
+  You will get instructions for a task to write.
+  First lay out the the structure outline of the task, and the chapters with detailed descriptions of what each chapter will contain. Feel free to make a quick comment on the purpose of each chapter.
+  Do not comment on what every piece of text does. Please note that the text should be fully complete. No placeholders.
+
+  You will start with the "detailed_outline" file, then go to the chapters in chronological order, and so on.
+  Please note that the text should be fully complete. No placeholders.
+
+  Follow a the best practices for writing a task, and naming convention.
+  Make sure that files are correctly conditioned on the subsequent chapters and outline(s). The text should be fully complete. Make sure that text in different files are compatible with each other.
+  When writing text if you are unsure, write the most plausible text.
+
+  Useful to know:
+
+  It is helpful to write a detailed outline of the task first, and then write the chapters in order.
+  Always add a comment briefly describing the purpose of each file.
+  Always follow the best practices for the requested structure and how to package the completed task.
+
+  Objective:```
+  {prompt_task}
+  ```
+
+  Understand the problem, by creating an extremely detailed step-by-step plan, where each step is long (multiple sentences) and in total includes every single feature requirement specified above, feel free to copy directly from it. Use no more than 10 steps in the plan. Perform additional, checks and evaluation at each step when applicable to help make an excellent coherent task, where all the text is fully complete. Use best task design practices, and you can output large amounts of text at once. Please include a last sentence to perform checks when implementing or writing text in that same step. You will receive no human input at any stage, so you cannot use a human to perform any checks. Only create a detailed plan to begin with, which includes performing consistency checks. Please be sure to include all of the specified feature requirements in the following plan.
+reflect_on_prompt_program: |
+  Please reflect on the plan, and increase the number of generated steps to that of 100 or so very detailed steps that include all the feature requirements.
+test_writing_advice: |
+  .
+control_unit_execute_instruction: |
+  Objective: Execute sub task step:```{step}```.\n\n Note: Condition any new text files on the existing text files: {file_names}. Fully implement in text, no placeholders. You can now optionally view the existing files if you need to view them to complete the current task step. You have a limited context window so be selective about which files you view, only view the files you think you might need to view. {test_writing_advice}\n\nSummary output of previous step: ""{previous_step_output_summary}""\n\nRespond now only with a function call of one of the following functions provided: {functions_provided}, and if you want to output text only use the `write_files` function to output text.
+control_unit_exhaust_context_window: |
+  You have exhausted your context window. Reflect on your progress. Provide a short concise response, of two sentences maximum, this will be used to restart this step from the beginning without the previous messages.
+control_unit_instruction_complete_summarize_output: |
+  Please provide a one or two sentence summary of the output of this step, which is useful for the next step. Your response will be used when starting the next step without any of the previous messages.
+control_unit_instruction_erroring_fix_the_code: |
+  {error_message}\n\nReflect and write the full complete corrected text to correct the text. Condition it on existing text: {file_names}.\n{test_writing_advice}\n\nRespond now only with a function call of one of the following functions provided: {functions_provided}, and if you want to output text only use the `write_files` function to output text.
+control_unit_cycle_message_to_check_if_instruction_complete: |
+  Has the sub task step been completed of:```{step}```.\n\n If yes, call the function `sub_task_step_complete`, otherwise reflect and correct the full text to complete the task. Note: Condition any new text files on the existing text files: {file_names}. Fully implement these features in the text, no placeholders.\n Respond now only with a function call of one of the following functions provided: {functions_provided}, and if you want to output text only use the `write_files` function to output text.

@@ -1,0 +1,23 @@
+Index
+
+Recipes:
+- Pappardelle al Cinghiale, 23
+- Tagliatelle al Tartufo, 24
+- Spaghetti alla Puttanesca, 45
+- Linguine al Frutti di Mare, 46
+
+Pasta Types:
+- Pappardelle, 22
+- Tagliatelle, 24
+- Spaghetti, 44
+- Linguine, 46
+
+Key Terms:
+- All-Purpose Flour, 89
+- Semolina Flour, 89
+- 00 Flour, 89
+- Kneading Techniques, 90
+- Rolling by Hand, 91
+- Using a Pasta Machine, 91
+
+Note: Page numbers are placeholders and should be updated to reflect the final pagination of the book.

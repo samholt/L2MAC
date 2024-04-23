@@ -1,0 +1,7 @@
+pyyaml
+pydantic
+typer>=0.9.0
+numpy
+openai
+tiktoken
+timeout-decorator
