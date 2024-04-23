@@ -80,12 +80,12 @@ codebase: dict = generate_codebase("Create a beautiful, playable and simple snak
 print(codebase)  # it will print the codebase (repo) complete with all the files as a dictionary, and produce a local codebase folder in ./workspace
 ```
 
-### [QuickStart](https://github.com/samholt/L2MAC/guide/get_started/quickstart.html)
+### [QuickStart](https://samholt.github.io/L2MAC/guide/get_started/quickstart.html)
 
 ## Tutorial
 
 - 🗒 [Online Documentation](https://samholt.github.io/L2MAC/)
-- 💻 [Usage](https://github.com/samholt/L2MAC/guide/get_started/quickstart.html)  
+- 💻 [Usage](https://samholt.github.io/L2MAC/guide/get_started/quickstart.html)  
 - 🔎 [What can L2MAC do?](https://samholt.github.io/L2MAC/guide/get_started/introduction.html)
 - 🖼️ [Gallery of Examples Produced](https://samholt.github.io/L2MAC/guide/use_cases/gallery.html)
 - 🛠 How to run L2MAC? 
