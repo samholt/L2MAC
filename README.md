@@ -84,18 +84,18 @@ print(codebase)  # it will print the codebase (repo) complete with all the files
 
 ## Tutorial
 
-- 🗒 [Online Documentation](https://samholt.github.io/l2mac/)
+- 🗒 [Online Documentation](https://samholt.github.io/L2MAC/)
 - 💻 [Usage](https://github.com/samholt/L2MAC/guide/get_started/quickstart.html)  
-- 🔎 [What can L2MAC do?](https://samholt.github.io/l2mac/guide/get_started/introduction.html)
-- 🖼️ [Gallery of Examples Produced](https://samholt.github.io/l2mac/guide/use_cases/gallery.html)
+- 🔎 [What can L2MAC do?](https://samholt.github.io/L2MAC/guide/get_started/introduction.html)
+- 🖼️ [Gallery of Examples Produced](https://samholt.github.io/L2MAC/guide/use_cases/gallery.html)
 - 🛠 How to run L2MAC? 
-  - [L2MAC Usage & Development Guide | L2MAC 101](https://samholt.github.io/l2mac/guide/tutorials/l2mac_101.html)
+  - [L2MAC Usage & Development Guide | L2MAC 101](https://samholt.github.io/L2MAC/guide/tutorials/l2mac_101.html)
 - 🧑‍💻 Contribution
-  - [Development Roadmap](https://samholt.github.io/l2mac/guide/roadmap.html)
+  - [Development Roadmap](https://samholt.github.io/L2MAC/guide/roadmap.html)
 - 🔖 Use Cases
-  - [Create a state-of-the-art large codebase](https://samholt.github.io/l2mac/guide/use_cases/codebase_generator.html)
-  - [Create an entire book](https://samholt.github.io/l2mac/guide/use_cases/book_generator.html)
-- ❓ [FAQs](https://samholt.github.io/l2mac/guide/faq.html)
+  - [Create a state-of-the-art large codebase](https://samholt.github.io/L2MAC/guide/use_cases/codebase_generator.html)
+  - [Create an entire book](https://samholt.github.io/L2MAC/guide/use_cases/book_generator.html)
+- ❓ [FAQs](https://samholt.github.io/L2MAC/guide/faq.html)
 
 ## Support
 

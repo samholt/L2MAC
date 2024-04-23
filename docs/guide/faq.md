@@ -8,7 +8,7 @@ Our vision empowers users to achieve 10x more with AI. The LLM Automatic Compute
 
 ### Link
 
-1.  Code：https://github.com/samholt/l2mac/
+1.  Code：https://github.com/samholt/L2MAC/
 2.  Roadmap：https://github.com/samholt/L2MAC/blob/master/docs/roadmap.md
 
 ### How do I become a contributor?

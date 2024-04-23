@@ -17,7 +17,7 @@ Enable LLM-Automatic Computer (L2MAC) to run prompt programs with advanced contr
 * In Python, when generating a codebase, and specific new package versions are being recommended by the LLM generating, creating an on-the-fly python virtualenv to install these the packages in the requirements file, as the requirements file is updated. We are looking for contributors for this feature, so we warmly welcome any PR's implementing this.
 
 1. Usability
-   1. Write documentation describing the current features and usage at all levels (ongoing, continuously adding contents to [documentation site](https://samholt.github.io/l2mac/)
+   1. Write documentation describing the current features and usage at all levels (ongoing, continuously adding contents to [documentation site](https://samholt.github.io/L2MAC/)
    2. Support Docker
    3. Support multiple languages
 2. Features

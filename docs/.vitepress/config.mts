@@ -6,13 +6,13 @@ export default defineConfig({
     math: true,
   },
   title: "L2MAC",
-  base: "/l2mac/",
+  base: "/L2MAC/",
   description: "The LLM Automatic Computer Framework",
   lastUpdated: true,
   themeConfig: {
     logo: '/l2mac-icon.png',
     editLink: {
-      pattern: 'https://github.com/samholt/l2mac/blob/master/docs/:path'
+      pattern: 'https://github.com/samholt/L2MAC/blob/master/docs/:path'
     },
     search: {
       provider: 'local',
@@ -141,5 +141,5 @@ export default defineConfig({
           copyright: 'Copyright © 2023-present Sam Holt'
         }
       },
-  head: [['link', { rel: 'icon', href: '/l2mac/favicon.ico' }]]
+  head: [['link', { rel: 'icon', href: '/L2MAC/favicon.ico' }]]
 })
