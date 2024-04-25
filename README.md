@@ -139,6 +139,9 @@ To cite [L2MAC](https://openreview.net/forum?id=EhrzQwsV4K) in publications, ple
 2. We further evaluated L2MAC on the standard **HumanEval benchmark** and observe that it achieves a state-of-the-art score of [90.2% Pass@1](https://paperswithcode.com/sota/code-generation-on-humaneval).
 3. L2MAC also works for general-purpose extensive text-based tasks, such as writing an [entire book from a single prompt](https://samholt.github.io/L2MAC/guide/use_cases/gallery.html#entire-book-italian-pasta-recipe-book).
 
+![HumanEval](docs/public/images/human_eval.png)
+<p align="center">LLM-Automatic Computer (L2MAC) achieves strong performance on HumanEval coding benchmark and is currently ranked the <b>3rd best AI coding agent in the world</b> on the global coding <a href="https://paperswithcode.com/sota/code-generation-on-humaneval">industry-standard leaderboard of HumanEval</a>.</p>
+
 ### In depth-comparison to AutoGPT and GPT-4
 
 #### Can L2MAC correctly perform task-oriented context management?
