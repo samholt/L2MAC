@@ -12,7 +12,7 @@ extras_require = {"dev": ["pylint~=3.0.3", "black~=23.3.0", "isort~=5.12.0", "pr
 
 setup(
     name="l2mac",
-    version="0.0.1",
+    version="0.0.2",
     description="The LLM Automatic Computer Framework",
     long_description=long_description,
     long_description_content_type="text/markdown",

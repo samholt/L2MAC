@@ -1,6 +1,5 @@
 from l2mac import generate_codebase
 
-# run pip install pygame==2.1.2
 codebase: dict = generate_codebase(
     "Create a beautiful, playable and simple snake game with pygame. Make the snake and food be aligned to the same 10-pixel grid.",
     steps=2,

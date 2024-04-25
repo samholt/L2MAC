@@ -5,3 +5,4 @@ numpy
 openai
 tiktoken
 timeout-decorator
+pygame==2.1.2
