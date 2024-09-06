@@ -1,4 +1,4 @@
-# L2MAC: Large Langauge Model Automatic Computer
+# L2MAC: Large Language Model Automatic Computer
 
 <p align="center">
 <b>Pioneering the first practical LLM-based general-purpose stored-program automatic computer (von Neumann architecture) framework in an LLM-based multi-agent system, for solving complex tasks through generating extensive and consistent outputs, unbounded by the LLMs fixed context window constraint.</b>
