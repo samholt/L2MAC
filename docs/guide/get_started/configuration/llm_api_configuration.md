@@ -6,7 +6,7 @@ After installation, follow these steps to configure the LLM API, using the OpenA
 
 1. **Initialize Configuration**:
 
-   - Execute `l2mac --init-config` to generate `~/.l2mac/config.yaml`. Edit this file with your API configuration to avoid accidentally sharing your API key.
+   - Execute `l2mac --init-config ""` to generate `~/.l2mac/config.yaml`. Edit this file with your API configuration to avoid accidentally sharing your API key.
 
 2. **Edit Configuration**:
 

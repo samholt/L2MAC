@@ -1,14 +1,23 @@
+"""Setup script for the L2MAC package."""
 from pathlib import Path
 
 from setuptools import find_packages, setup
 
 here = Path(__file__).resolve().parent
 long_description = (here / "README.md").read_text(encoding="utf-8")
-requirements = (here / "requirements.txt").read_text(encoding="utf-8").splitlines()
-
+requirements = ((here /
+                 "requirements.txt").read_text(encoding="utf-8").splitlines())
 
 extras_require = {}
-extras_require = {"dev": ["pylint~=3.0.3", "black~=23.3.0", "isort~=5.12.0", "pre-commit~=3.6.0"]}
+extras_require = {
+    "dev": [
+        "pylint~=3.0.3",
+        "black~=23.3.0",
+        "isort~=5.12.0",
+        "pre-commit~=3.6.0",
+        "pytype~=2024.10.11",
+    ]
+}
 
 setup(
     name="l2mac",
@@ -20,7 +29,9 @@ setup(
     author="Sam Holt",
     author_email="samuel.holt.direct@gmail.com",
     license="MIT",
-    keywords="l2mac multi-agent programming gpt llm metaprogramming automatic computer llm-automatic",
+    keywords=
+    "l2mac multi-agent programming gpt llm metaprogramming automatic computer"
+    " llm-automatic",
     packages=find_packages(exclude=["contrib", "docs", "examples", "tests*"]),
     include_package_data=True,
     package_data={

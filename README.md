@@ -51,7 +51,7 @@ For detailed installation guidance, please refer to [installation](https://samho
 You can init the config of L2MAC by running the following command, or manually create `~/.L2MAC/config.yaml` file:
 ```bash
 # Check https://samholt.github.io/L2MAC/guide/get_started/configuration.html for more details
-l2mac --init-config  # it will create ~/.l2mac/config.yaml, just modify it to your needs
+l2mac --init-config ""  # it will create ~/.l2mac/config.yaml, just modify it to your needs
 ```
 
 You can configure `~/.l2mac/config.yaml` according to the [example](https://github.com/samholt/L2MAC/blob/master/config/config.yaml) and [doc](https://samholt.github.io/L2MAC/guide/get_started/configuration.html):

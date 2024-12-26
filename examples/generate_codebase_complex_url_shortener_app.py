@@ -1,3 +1,7 @@
+"""
+This example demonstrates how to generate a codebase for a complex URL
+ shortener application.
+"""
 from l2mac import generate_codebase
 
 codebase: dict = generate_codebase(
@@ -5,7 +9,8 @@ codebase: dict = generate_codebase(
 **Online URL Shortening Service**
 
 **Overview**:
-A service that allows users to submit long URLs and then receive a shortened version of that URL for ease of sharing.
+A service that allows users to submit long URLs and then receive a shortened
+ version of that URL for ease of sharing.
 
 **Functional Requirements to implement**:
 
@@ -41,4 +46,7 @@ A service that allows users to submit long URLs and then receive a shortened ver
     steps=10,
 )
 
-print(codebase)  # it will print the codebase (repo) complete with all the files as a dictionary
+# it will print the codebase (repo) complete with all the files as a dictionary
+print(
+    codebase
+)
