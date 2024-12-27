@@ -21,7 +21,7 @@ extras_require = {
 
 setup(
     name="l2mac",
-    version="0.0.2",
+    version="0.0.3",
     description="The LLM Automatic Computer Framework",
     long_description=long_description,
     long_description_content_type="text/markdown",
