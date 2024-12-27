@@ -147,7 +147,7 @@ def check_pytest(file_dict: dict):
 
 def pytest_files(files_to_test: List[str],
                  file_dict: dict,
-                 enable_tests=True):
+                 enable_tests=True) -> str:
   if not enable_tests:
     output = "Manual tests passed."
     return json.dumps({"output": output})
@@ -212,7 +212,7 @@ def run_python_file(
     file_dict: dict,
     arguments: List[str],
     enable_tests=True,
-):
+) -> str:
   if not enable_tests:
     output = "Manual tests passed."
     return json.dumps({"output": output})

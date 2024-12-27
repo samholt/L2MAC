@@ -33,7 +33,7 @@ from typing import List
 
 def view_files(files: List[str],
                file_dict: dict,
-               enable_tests=True): # pylint: disable=unused-argument
+               enable_tests=True) -> str: # pylint: disable=unused-argument
   files_not_found = []
   for f in files:
     if f not in file_dict:
@@ -64,7 +64,8 @@ def view_files(files: List[str],
   return json.dumps(response)
 
 
-def list_files(folder_path: str, file_dict: dict, enable_tests=True): # pylint: disable=unused-argument
+def list_files(folder_path: str, # pylint: disable=unused-argument
+               file_dict: dict, enable_tests=True) -> str: # pylint: disable=unused-argument
   return json.dumps({"files": list(file_dict.keys())})
 
 

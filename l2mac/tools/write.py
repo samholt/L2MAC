@@ -60,7 +60,7 @@ Dependencies:
 """
 import json
 from copy import deepcopy
-from typing import List
+from typing import List, Tuple
 
 from l2mac.tools.code_analysis import (
     check_pytest_with_timeout,
@@ -73,7 +73,7 @@ def write_files(
     list_of_file_objects: List[dict],
     file_dict: dict,
     enable_tests=True,
-):
+) -> Tuple[str, dict]:
   new_file_dict = implement_git_diff_on_file_dict(
       file_dict_input=file_dict,
       change_files_and_contents_input=list_of_file_objects,
@@ -104,9 +104,6 @@ def write_files(
     }
   else:
     new_output = test_results.strip() + "\n" + syntax_results.strip()
-    # if len(new_output) > 5000:
-    #     new_output = new_output[:5000]
-    #     new_output = new_output + '\nRest of output was trimmed.'
     output = {
         "write_files_status":
         "success",
@@ -168,7 +165,10 @@ def update_file_contents(existing_file_contents,
   return existing_file_contents.split("\n")
 
 
-def delete_files(files: List[str], file_dict: dict, enable_tests=True): # pylint: disable=unused-argument
+def delete_files(files: List[str],
+                 file_dict: dict,
+                 enable_tests=True) \
+                  -> Tuple[str, dict]: # pylint: disable=unused-argument
   for file in files:
     if file == "-1":
       file_dict = {}

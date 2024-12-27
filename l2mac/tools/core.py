@@ -25,7 +25,7 @@ Functions:
 """
 import json
 import traceback
-from typing import List
+from typing import Any, List, Tuple
 
 from l2mac.tools.code_analysis import pytest_files, run_python_file
 from l2mac.tools.control_unit import (
@@ -226,7 +226,8 @@ def process_function_call_and_return_message(tool_calls: dict,
                                              file_dict: dict,
                                              tools: List[dict],
                                              logger=None,
-                                             enable_tests=True):
+                                             enable_tests=True) -> \
+                                              Tuple[list[dict[str, Any]], dict]:
   function_name = ""
   if len(tools) >= 1:
     functions_available_keys = process_functions_into_function_names(tools)
@@ -336,4 +337,4 @@ def process_function_call_and_return_message(tool_calls: dict,
           "content": json_fun_content,
       }
       return_messages.append(function_return_message)
-  return return_messages, file_dict
+  return return_messages, file_dict  # pytype: disable=bad-return-type

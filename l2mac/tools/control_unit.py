@@ -21,11 +21,12 @@ from l2mac.tools.code_analysis import (
 )
 
 
-def provide_detailed_sub_task_steps_for_sub_agents(steps: List[str]):
+def provide_detailed_sub_task_steps_for_sub_agents(steps:
+                                                   List[str]) -> List[str]:
   return steps
 
 
-def check_sub_task_step_complete(file_dict: dict, enable_tests=True):
+def check_sub_task_step_complete(file_dict: dict, enable_tests=True) -> str:
   # Run tests & Syntax checks
   if not enable_tests:
     output = {"status": "TASK_STEP_COMPLETE", "message": "All tests passed"}
