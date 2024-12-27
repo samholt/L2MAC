@@ -228,25 +228,6 @@ openai_rate_limits_per_tier_per_model = {  # Updated from
             "TPM": 150000,
             "Batch Queue Limit": None,
         },
-        "whisper-1": {
-            "RPM": 3,
-            "RPD": 200,
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "tts-1": {"RPM": 3, "RPD": 200, "TPM": None, "Batch Queue Limit": None},
-        "dall-e-2": {
-            "RPM": "5 img/min",
-            "RPD": None,
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "dall-e-3": {
-            "RPM": "1 img/min",
-            "RPD": None,
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
     },
     "tier1": {
         "gpt-4-turbo": {
@@ -273,36 +254,6 @@ openai_rate_limits_per_tier_per_model = {  # Updated from
             "TPM": 1000000,
             "Batch Queue Limit": None,
         },
-        "whisper-1": {
-            "RPM": 50,
-            "RPD": None,
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "tts-1": {
-            "RPM": 50,
-            "RPD": None,
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "tts-1-hd": {
-            "RPM": 3,
-            "RPD": None,
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "dall-e-2": {
-            "RPM": "5 img/min",
-            "RPD": None,
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "dall-e-3": {
-            "RPM": "5 img/min",
-            "RPD": None,
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
     },
     "tier2": {
         "gpt-4-turbo": {
@@ -319,19 +270,6 @@ openai_rate_limits_per_tier_per_model = {  # Updated from
         "text-embedding-3-large": {
             "RPM": 500,
             "TPM": 1000000,
-            "Batch Queue Limit": None,
-        },
-        "whisper-1": {"RPM": "50", "TPM": None, "Batch Queue Limit": None},
-        "tts-1": {"RPM": "50", "TPM": None, "Batch Queue Limit": None},
-        "tts-1-hd": {"RPM": "5", "TPM": None, "Batch Queue Limit": None},
-        "dall-e-2": {
-            "RPM": "50 img/min",
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "dall-e-3": {
-            "RPM": "7 img/min",
-            "TPM": None,
             "Batch Queue Limit": None,
         },
     },
@@ -352,19 +290,6 @@ openai_rate_limits_per_tier_per_model = {  # Updated from
             "TPM": 5000000,
             "Batch Queue Limit": None,
         },
-        "whisper-1": {"RPM": 100, "TPM": None, "Batch Queue Limit": None},
-        "tts-1": {"RPM": 100, "TPM": None, "Batch Queue Limit": None},
-        "tts-1-hd": {"RPM": 7, "TPM": None, "Batch Queue Limit": None},
-        "dall-e-2": {
-            "RPM": "100 img/min",
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "dall-e-3": {
-            "RPM": "7 img/min",
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
     },
     "tier4": {
         "gpt-4-turbo": {
@@ -383,19 +308,6 @@ openai_rate_limits_per_tier_per_model = {  # Updated from
             "TPM": 5000000,
             "Batch Queue Limit": None,
         },
-        "whisper-1": {"RPM": 100, "TPM": None, "Batch Queue Limit": None},
-        "tts-1": {"RPM": 100, "TPM": None, "Batch Queue Limit": None},
-        "tts-1-hd": {"RPM": 10, "TPM": None, "Batch Queue Limit": None},
-        "dall-e-2": {
-            "RPM": "100 img/min",
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "dall-e-3": {
-            "RPM": "15 img/min",
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
     },
     "tier5": {
         "gpt-4-turbo": {
@@ -412,19 +324,6 @@ openai_rate_limits_per_tier_per_model = {  # Updated from
         "text-embedding-3-large": {
             "RPM": 10000,
             "TPM": 10000000,
-            "Batch Queue Limit": None,
-        },
-        "whisper-1": {"RPM": 500, "TPM": None, "Batch Queue Limit": None},
-        "tts-1": {"RPM": 500, "TPM": None, "Batch Queue Limit": None},
-        "tts-1-hd": {"RPM": 20, "TPM": None, "Batch Queue Limit": None},
-        "dall-e-2": {
-            "RPM": "500 img/min",
-            "TPM": None,
-            "Batch Queue Limit": None,
-        },
-        "dall-e-3": {
-            "RPM": "50 img/min",
-            "TPM": None,
             "Batch Queue Limit": None,
         },
     },
