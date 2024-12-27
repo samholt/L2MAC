@@ -59,7 +59,7 @@ You can configure `~/.l2mac/config.yaml` according to the [example](https://gith
 ```yaml
 llm:
   api_type: "openai"  # or azure etc. Check ApiType for more options
-  model: "gpt-4-turbo-preview"  # or "gpt-4-turbo"
+  model: "gpt-4o"
   base_url: "https://api.openai.com/v1"  # or forward url / other llm url
   api_key: "YOUR_API_KEY"
 ```
